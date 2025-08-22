@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${raleway.variable} ${geistMono.variable} antialiased font-sans`}
+        className={`${raleway.variable} ${geistMono.variable} font-sans antialiased`}
       >
         {children}
       </body>

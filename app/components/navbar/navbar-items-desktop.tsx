@@ -13,13 +13,13 @@ export default function NavbarItemsMobile() {
   };
 
   return (
-    <ul className="hidden md:flex items-center gap-6">
+    <ul className="hidden items-center gap-6 md:flex">
       {menuItems.map(({ sectionId, label }) => (
         <li key={sectionId}>
           <Button
             onClick={() => scrollToSection(sectionId)}
             variant="ghost"
-            className="hover:bg-transparent hover:text-gold uppercase"
+            className="hover:text-gold uppercase hover:bg-transparent"
           >
             {label}
           </Button>

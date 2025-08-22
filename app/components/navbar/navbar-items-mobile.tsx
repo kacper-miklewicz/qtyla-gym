@@ -35,32 +35,32 @@ export default function NavbarItemsDesktop() {
           className="hover:bg-transparent hover:text-white"
           onClick={() => setIsOpen(true)}
         >
-          <IoMenuSharp className="text-white size-8" />
+          <IoMenuSharp className="size-8 text-white" />
         </Button>
         <SheetContent
           side="top"
-          className="bg-deep-black text-white h-full"
+          className="bg-deep-black h-full text-white"
           showClose={false}
         >
-          <SheetHeader className="px-4 py-2 h-full">
-            <SheetTitle className="text-white flex justify-end items-center">
+          <SheetHeader className="h-full px-4 py-2">
+            <SheetTitle className="flex items-center justify-end text-white">
               <Button
                 variant="ghost"
                 size="icon"
                 className="hover:bg-transparent hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
-                <IoCloseSharp className="text-white size-8" />
+                <IoCloseSharp className="size-8 text-white" />
               </Button>
             </SheetTitle>
             <SheetDescription asChild className="text-white">
-              <ul className="flex flex-col items-center gap-6 mt-10 text-2xl font-bold">
+              <ul className="mt-10 flex flex-col items-center gap-6 text-2xl font-bold">
                 {menuItems.map(({ sectionId, label }) => (
                   <li key={sectionId}>
                     <Button
                       type="button"
                       onClick={() => scrollToSection(sectionId)}
-                      className="hover:bg-transparent hover:text-white uppercase"
+                      className="uppercase hover:bg-transparent hover:text-white"
                       variant="ghost"
                     >
                       {label}

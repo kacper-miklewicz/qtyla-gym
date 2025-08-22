@@ -1,5 +1,6 @@
-import Navbar from "./components/navbar/navbar";
 import { menuItems } from "./components/navbar/constants";
+
+import Navbar from "./components/navbar/navbar";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
           <section
             id={item.sectionId}
             key={item.sectionId}
-            className="min-h-screen flex items-center justify-center border-b"
+            className="flex min-h-screen items-center justify-center border-b"
           >
             <h1 className="text-4xl font-bold font-stretch-semi-condensed">
               {item.label}
