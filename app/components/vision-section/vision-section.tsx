@@ -6,10 +6,7 @@ import { VISION_ITEMS } from "./constants";
 
 export default function VisionSection() {
   return (
-    <section
-      id="wizja"
-      className="bg-deep-black flex h-auto min-h-[400px] flex-col items-center px-8 py-20 text-center text-white md:px-20 md:py-32 xl:px-32 2xl:px-48"
-    >
+    <section id="vision" className="section-base">
       <h2 className="mb-6 text-3xl font-bold md:text-4xl">
         Wizja QTYLA Training Club
       </h2>

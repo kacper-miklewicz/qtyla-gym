@@ -1,7 +1,6 @@
 export const MENU_ITEMS = [
-  { label: "Wizja", sectionId: "wizja" },
-  { label: "Treningi", sectionId: "treningi" },
-  { label: "Grafik", sectionId: "grafik" },
-  { label: "Cennik", sectionId: "cennik" },
-  { label: "Kontakt", sectionId: "kontakt" },
+  { label: "Wizja", sectionId: "vision" },
+  { label: "Oferta", sectionId: "offer" },
+  { label: "Grafik", sectionId: "schedule" },
+  { label: "Kontakt", sectionId: "contact" },
 ];

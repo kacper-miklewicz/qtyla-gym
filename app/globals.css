@@ -167,3 +167,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .section-base {
+    @apply bg-deep-black flex flex-col items-center px-8 py-12 text-center text-white md:px-20 md:py-16 xl:px-32 2xl:px-48;
+  }
+}

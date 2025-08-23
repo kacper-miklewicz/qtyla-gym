@@ -15,7 +15,7 @@ export default function HeroSection() {
           QTYLA Training Club
         </h1>
         <Button
-          onClick={() => scrollSectionIntoView("wizja")}
+          onClick={() => scrollSectionIntoView("vision")}
           className="hover:bg-gold-500 bg-gold-600 text-white"
         >
           Poznaj naszą wizję
