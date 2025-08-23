@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Raleway } from "next/font/google";
+import { Geist_Mono, Oswald } from "next/font/google";
 
 import "./globals.css";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
 });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${raleway.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${oswald.variable} ${geistMono.variable} font-sans antialiased`}
       >
         {children}
       </body>

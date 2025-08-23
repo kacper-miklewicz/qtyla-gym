@@ -4,7 +4,9 @@ import { useState } from "react";
 
 import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
 
-import { menuItems } from "./constants";
+import { scrollSectionIntoView } from "@/app/utils";
+
+import { MENU_ITEMS } from "./constants";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -17,14 +19,6 @@ import {
 
 export default function NavbarItemsDesktop() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const scrollToSection = (id: string) => {
-    setIsOpen(false);
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <div className="md:hidden">
@@ -55,11 +49,13 @@ export default function NavbarItemsDesktop() {
             </SheetTitle>
             <SheetDescription asChild className="text-white">
               <ul className="mt-10 flex flex-col items-center gap-6 text-2xl font-bold">
-                {menuItems.map(({ sectionId, label }) => (
+                {MENU_ITEMS.map(({ sectionId, label }) => (
                   <li key={sectionId}>
                     <Button
                       type="button"
-                      onClick={() => scrollToSection(sectionId)}
+                      onClick={() =>
+                        scrollSectionIntoView(sectionId, () => setIsOpen(false))
+                      }
                       className="uppercase hover:bg-transparent hover:text-white"
                       variant="ghost"
                     >

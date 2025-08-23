@@ -1,14 +1,16 @@
-import { menuItems } from "./components/navbar/constants";
+import { MENU_ITEMS } from "./components/navbar/constants";
 
-import Navbar from "./components/navbar/navbar";
+import { Navbar } from "./components/navbar";
+import { HeroSection } from "./components/hero-section";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <main>
+        <HeroSection />
         {/* Temporary solution: to test the menu */}
-        {menuItems.map((item) => (
+        {MENU_ITEMS.map((item) => (
           <section
             id={item.sectionId}
             key={item.sectionId}
