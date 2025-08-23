@@ -2,6 +2,7 @@ import { MENU_ITEMS } from "./components/navbar/constants";
 
 import { Navbar } from "./components/navbar";
 import { HeroSection } from "./components/hero-section";
+import { VisionSection } from "./components/vision-section";
 
 export default function Home() {
   return (
@@ -9,8 +10,9 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <VisionSection />
         {/* Temporary solution: to test the menu */}
-        {MENU_ITEMS.map((item) => (
+        {MENU_ITEMS.slice(1).map((item) => (
           <section
             id={item.sectionId}
             key={item.sectionId}

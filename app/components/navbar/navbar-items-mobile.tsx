@@ -48,7 +48,7 @@ export default function NavbarItemsDesktop() {
               </Button>
             </SheetTitle>
             <SheetDescription asChild className="text-white">
-              <ul className="mt-10 flex flex-col items-center gap-6 text-2xl font-bold">
+              <ul className="flex h-[calc(100%-128px)] flex-col items-center justify-center gap-10 font-bold">
                 {MENU_ITEMS.map(({ sectionId, label }) => (
                   <li key={sectionId}>
                     <Button
@@ -56,7 +56,7 @@ export default function NavbarItemsDesktop() {
                       onClick={() =>
                         scrollSectionIntoView(sectionId, () => setIsOpen(false))
                       }
-                      className="uppercase hover:bg-transparent hover:text-white"
+                      className="text-2xl uppercase hover:bg-transparent hover:text-white"
                       variant="ghost"
                     >
                       {label}
