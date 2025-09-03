@@ -2,7 +2,7 @@ import { RULES } from "./constants";
 
 export default function RulesSection() {
   return (
-    <section id="rules" className="section-base w-full px-4 py-16">
+    <section id="rules" className="section-base w-full">
       <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">
         Regulamin klubu
       </h2>

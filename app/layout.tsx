@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Oswald } from "next/font/google";
 
+import { Navbar } from "./components/navbar";
+
 import "./globals.css";
 
 const oswald = Oswald({
@@ -14,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "QTYLA Gym",
+  title: "QTYLA Training Club",
   description: "Klub fitness w Kwidzynie",
 };
 
@@ -28,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${oswald.variable} ${geistMono.variable} font-sans antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

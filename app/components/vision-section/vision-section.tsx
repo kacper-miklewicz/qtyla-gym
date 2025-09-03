@@ -1,6 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
+
+import { Button } from "@/components/ui/button";
 
 import { VISION_ITEMS } from "./constants";
 
@@ -16,7 +19,7 @@ export default function VisionSection() {
         misją jest stworzenie społeczności, która inspiruje, motywuje i wspiera
         się nawzajem na drodze do zdrowia i dobrej kondycji.
       </p>
-      <div className="mt-12 flex max-w-200 flex-col gap-10">
+      <div className="mt-12 mb-6 flex max-w-200 flex-col gap-10">
         {VISION_ITEMS.map((item, idx) => (
           <div
             key={idx}
@@ -53,6 +56,12 @@ export default function VisionSection() {
           </div>
         ))}
       </div>
+      <Button
+        asChild
+        className="hover:bg-gold-500 bg-gold-600 rounded-none px-12 py-8 text-2xl text-white"
+      >
+        <Link href="/czlonkowstwo">Dołącz do nas</Link>
+      </Button>
     </section>
   );
 }
