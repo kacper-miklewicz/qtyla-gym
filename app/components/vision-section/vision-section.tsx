@@ -23,7 +23,7 @@ export default function VisionSection() {
         {VISION_ITEMS.map((item, idx) => (
           <div
             key={idx}
-            className="grid grid-cols-1 items-stretch md:grid-cols-2"
+            className="grid grid-cols-1 items-stretch overflow-hidden rounded-md md:grid-cols-2"
           >
             <div
               className={cn(
@@ -56,10 +56,7 @@ export default function VisionSection() {
           </div>
         ))}
       </div>
-      <Button
-        asChild
-        className="hover:bg-gold-500 bg-gold-600 rounded-none px-12 py-8 text-2xl text-white"
-      >
+      <Button asChild size="xl">
         <Link href="/czlonkowstwo">Dołącz do nas</Link>
       </Button>
     </section>

@@ -22,11 +22,7 @@ export default function HeroSection() {
           height={120}
           className="mb-8"
         />
-        <Button
-          size="lg"
-          onClick={() => scrollSectionIntoView("vision")}
-          className="hover:bg-gold-500 bg-gold-600 text-white"
-        >
+        <Button size="lg" onClick={() => scrollSectionIntoView("vision")}>
           Poznaj naszą wizję
         </Button>
       </div>
