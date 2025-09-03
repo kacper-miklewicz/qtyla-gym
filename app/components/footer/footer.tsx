@@ -1,11 +1,14 @@
 export default function Footer() {
   return (
     <footer className="bg-concrete flex flex-col items-center justify-between px-6 py-8 text-white md:flex-row">
-      {/* Map Placeholder */}
-      <div className="mb-6 flex h-48 w-full items-center justify-center rounded bg-gray-800 md:mr-8 md:mb-0 md:w-1/2">
-        <span className="text-gray-400">[Map Placeholder]</span>
+      <div className="md:w-1/2">
+        <iframe
+          className="h-[450px] w-full"
+          loading="lazy"
+          allowFullScreen
+          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_f9RgCxAkcRY67QXaQJRUU&key=${process.env.GOOGLE_MAPS_API_KEY}`}
+        />
       </div>
-      {/* Contact Info */}
       <div className="flex w-full flex-col items-start md:w-1/2">
         <h2 className="mb-2 text-lg font-semibold">Contact Us</h2>
         <p className="mb-1">Qtyla Training Club</p>
