@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
 
@@ -16,6 +16,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import Link from "next/link";
 
 export default function NavbarItemsDesktop() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,20 +50,39 @@ export default function NavbarItemsDesktop() {
             </SheetTitle>
             <SheetDescription asChild className="text-white">
               <ul className="flex h-[calc(100%-128px)] flex-col items-center justify-center gap-10 font-bold">
-                {MENU_ITEMS.map(({ sectionId, label }) => (
-                  <li key={sectionId}>
-                    <Button
-                      type="button"
-                      onClick={() =>
-                        scrollSectionIntoView(sectionId, () => setIsOpen(false))
-                      }
-                      className="text-2xl uppercase hover:bg-transparent hover:text-white"
-                      variant="ghost"
-                    >
-                      {label}
-                    </Button>
-                  </li>
-                ))}
+                {MENU_ITEMS.map(({ sectionId, label, isLink }) => {
+                  const buttonClassNames =
+                    "text-2xl uppercase hover:bg-transparent hover:text-white";
+                  const buttonVariant = "ghost";
+
+                  return (
+                    <li key={sectionId}>
+                      {isLink ? (
+                        <Button
+                          type="button"
+                          className={buttonClassNames}
+                          variant={buttonVariant}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <Link href={sectionId}>{label}</Link>
+                        </Button>
+                      ) : (
+                        <Button
+                          type="button"
+                          onClick={() =>
+                            scrollSectionIntoView(sectionId, () =>
+                              setIsOpen(false),
+                            )
+                          }
+                          className={buttonClassNames}
+                          variant={buttonVariant}
+                        >
+                          {label}
+                        </Button>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </SheetDescription>
           </SheetHeader>
