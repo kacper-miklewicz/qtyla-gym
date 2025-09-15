@@ -1,16 +1,21 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { scrollSectionIntoView } from "@/app/utils";
 
-import { MENU_ITEMS } from "./constants";
+import { getMenuItems } from "./utils";
 
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export default function NavbarItemsMobile() {
+  const pathname = usePathname();
+  const menuItems = getMenuItems(pathname);
+
   return (
     <ul className="hidden items-center gap-6 md:flex">
-      {MENU_ITEMS.map(({ sectionId, label, isLink }) => {
+      {menuItems.map(({ sectionId, label, isLink }) => {
         const buttonClassNames =
           "hover:text-gold uppercase hover:bg-transparent";
         const buttonVariant = "ghost";

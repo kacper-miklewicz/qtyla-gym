@@ -2,11 +2,14 @@
 
 import React, { useState } from "react";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
 
 import { scrollSectionIntoView } from "@/app/utils";
 
-import { MENU_ITEMS } from "./constants";
+import { getMenuItems } from "./utils";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,10 +19,12 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import Link from "next/link";
 
 export default function NavbarItemsDesktop() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const pathname = usePathname();
+  const menuItems = getMenuItems(pathname);
 
   return (
     <div className="md:hidden">
@@ -50,7 +55,7 @@ export default function NavbarItemsDesktop() {
             </SheetTitle>
             <SheetDescription asChild className="text-white">
               <ul className="flex h-[calc(100%-128px)] flex-col items-center justify-center gap-10 font-bold">
-                {MENU_ITEMS.map(({ sectionId, label, isLink }) => {
+                {menuItems.map(({ sectionId, label, isLink }) => {
                   const buttonClassNames =
                     "text-2xl uppercase hover:bg-transparent hover:text-white";
                   const buttonVariant = "ghost";

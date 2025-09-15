@@ -5,6 +5,7 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -172,7 +173,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 const buttonClasses =
-  "absolute size-8 rounded-none bg-gold-600 hover:bg-gold-400 ring-gold-600 ring-1 border-none";
+  "absolute bg-transparent border-none text-steel shadow-none rounded-sm";
 
 function CarouselPrevious({
   className,
@@ -198,7 +199,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft />
+      <IoChevronBack className="text-steel !h-8 !w-8" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -228,7 +229,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight />
+      <IoChevronForward className="text-steel !h-8 !w-8" />
       <span className="sr-only">Next slide</span>
     </Button>
   );
