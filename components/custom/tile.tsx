@@ -1,0 +1,95 @@
+"use client";
+
+import { GoPlus } from "react-icons/go";
+import { Button } from "../ui/button";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+
+export interface TileProps {
+  title: string;
+  description: string;
+  backgroundImageUrl: string;
+  inProgress?: boolean;
+  buttonText?: string;
+  onButtonClick?: () => void;
+  isLink?: boolean;
+  linkUrl?: string;
+  linkTarget?: HTMLAnchorElement["target"];
+}
+
+export default function Tile({
+  title,
+  description,
+  backgroundImageUrl,
+  inProgress,
+  buttonText,
+  onButtonClick,
+  isLink,
+  linkUrl,
+}: TileProps) {
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+
+  const toggleDescription = () => {
+    setIsDescriptionExpanded(!isDescriptionExpanded);
+  };
+
+  return (
+    <div
+      className={`h-120 w-full overflow-hidden rounded-lg bg-cover bg-center`}
+      onMouseEnter={() => setIsDescriptionExpanded(true)}
+      onMouseLeave={() => setIsDescriptionExpanded(false)}
+      style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+    >
+      <div
+        className={cn(
+          "flex h-full flex-col justify-between bg-black/40 px-6 py-10 text-white transition-all duration-300",
+          {
+            "bg-black/55 backdrop-blur-xs": isDescriptionExpanded,
+          },
+        )}
+      >
+        <div
+          className={cn(
+            "flex flex-col gap-4 opacity-0 transition-all duration-300",
+            {
+              "opacity-100": isDescriptionExpanded,
+            },
+          )}
+        >
+          <p className="text-left">{description}</p>
+          {buttonText &&
+            (isLink ? (
+              <Button asChild variant="outline" className="self-start">
+                <Link href={linkUrl!}>{buttonText}</Link>
+              </Button>
+            ) : (
+              <Button
+                onClick={onButtonClick}
+                variant="outline"
+                className="self-start"
+              >
+                {buttonText}
+              </Button>
+            ))}
+        </div>
+        <div className="flex items-center justify-between">
+          <p className="text-2xl">{title}</p>
+          <Button
+            variant="outline"
+            size="icon"
+            className="rounded-full sm:hidden"
+            onClick={toggleDescription}
+          >
+            <GoPlus
+              size={20}
+              className={cn("!h-6 !w-6 transition-all duration-300", {
+                "rotate-45": isDescriptionExpanded,
+              })}
+            />
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+}

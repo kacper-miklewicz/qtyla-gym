@@ -3,11 +3,7 @@ import React from "react";
 const MembershipPage = () => {
   return (
     <main>
-      <h1>Członkostwo</h1>
-      <p>
-        Witamy na stronie członkostwa. Tutaj znajdziesz informacje dotyczące
-        członkostwa w naszym klubie.
-      </p>
+      <h1 className="text-2xl">Członkostwo</h1>
     </main>
   );
 };

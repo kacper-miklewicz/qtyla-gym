@@ -14,12 +14,12 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="flex flex-col gap-12 bg-white px-6 py-20 text-center md:px-8"
+      className="section-base flex flex-col gap-16 px-6 py-20 text-center md:px-8"
     >
-      <h2 className="text-2xl font-bold text-black uppercase md:text-3xl">
+      <h2 className="text-2xl font-bold uppercase md:text-3xl">
         czym jest qtyla
       </h2>
-      <p className="mx-auto max-w-3xl text-lg text-gray-700">
+      <p className="mx-auto max-w-3xl text-2xl font-thin text-white/70">
         QTYLA Training Club to miejsce, w którym liczy się jakość, komfort i
         społeczność. Limitowane członkostwo i system rezerwacji gwarantują
         przestrzeń i brak tłoku. Tworzymy środowisko oparte na szacunku i
