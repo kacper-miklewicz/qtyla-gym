@@ -8,40 +8,44 @@ import { scrollSectionIntoView } from "@/app/utils";
 import { getMenuItems } from "./utils";
 
 import { Button } from "@/components/ui/button";
+import Socials from "./socials";
 
 export default function NavbarItemsMobile() {
   const pathname = usePathname();
   const menuItems = getMenuItems(pathname);
 
   return (
-    <ul className="hidden items-center gap-6 md:flex">
-      {menuItems.map(({ sectionId, label, isLink }) => {
-        const buttonClassNames =
-          "hover:text-gold uppercase hover:bg-transparent";
-        const buttonVariant = "ghost";
+    <>
+      <ul className="hidden items-center gap-6 lg:flex">
+        {menuItems.map(({ sectionId, label, isLink }) => {
+          const buttonClassNames =
+            "hover:text-gold uppercase hover:bg-transparent text-md xl:text-lg";
+          const buttonVariant = "ghost";
 
-        return (
-          <li key={sectionId}>
-            {isLink ? (
-              <Button
-                asChild
-                variant={buttonVariant}
-                className={buttonClassNames}
-              >
-                <Link href={sectionId}>{label}</Link>
-              </Button>
-            ) : (
-              <Button
-                onClick={() => scrollSectionIntoView(sectionId)}
-                variant={buttonVariant}
-                className={buttonClassNames}
-              >
-                {label}
-              </Button>
-            )}
-          </li>
-        );
-      })}
-    </ul>
+          return (
+            <li key={sectionId}>
+              {isLink ? (
+                <Button
+                  asChild
+                  variant={buttonVariant}
+                  className={buttonClassNames}
+                >
+                  <Link href={sectionId}>{label}</Link>
+                </Button>
+              ) : (
+                <Button
+                  onClick={() => scrollSectionIntoView(sectionId)}
+                  variant={buttonVariant}
+                  className={buttonClassNames}
+                >
+                  {label}
+                </Button>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+      <Socials className="hidden lg:block" />
+    </>
   );
 }

@@ -15,7 +15,7 @@ export default function OfferSection() {
   return (
     <section id="offer" className="section-base pr-0 pl-6">
       <h2 className="mb-10 text-3xl font-bold">Oferta</h2>
-      <div className="mx-auto flex w-full max-w-[1280px] items-center justify-center">
+      <div className="mx-auto flex w-full items-center justify-center">
         <Carousel
           opts={{
             align: "start",
@@ -26,7 +26,7 @@ export default function OfferSection() {
             {offerTilesList.map((tile, index) => (
               <CarouselItem
                 key={index}
-                className="md:basis basis-[90%] last:mr-6 sm:basis-[45%] md:basis-[30%] lg:basis-[22.5%] xl:basis-[22.5%]"
+                className="md:basis basis-[90%] last:mr-6 sm:basis-[45%] md:basis-[30%] lg:basis-[22.5%] xl:basis-[22.5%] 2xl:basis-[18.5%]"
               >
                 <Tile
                   title={tile.title}
@@ -36,6 +36,7 @@ export default function OfferSection() {
                   onButtonClick={tile.onButtonClick}
                   isLink={tile.isLink}
                   linkUrl={tile.linkUrl}
+                  inProgress={tile.inProgress}
                 />
               </CarouselItem>
             ))}

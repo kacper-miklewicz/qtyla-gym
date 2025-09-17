@@ -1,10 +1,13 @@
 "use client";
 
-import { GoPlus } from "react-icons/go";
-import { Button } from "../ui/button";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
+
+import { cn } from "@/lib/utils";
+
+import { GoPlus } from "react-icons/go";
+
+import { Button } from "../ui/button";
 
 export interface TileProps {
   title: string;
@@ -45,7 +48,9 @@ export default function Tile({
         className={cn(
           "flex h-full flex-col justify-between bg-black/40 px-6 py-10 text-white transition-all duration-300",
           {
-            "bg-black/55 backdrop-blur-xs": isDescriptionExpanded,
+            "bg-black/55 backdrop-blur-xs":
+              isDescriptionExpanded && !inProgress,
+            "backdrop-blur-xs": inProgress,
           },
         )}
       >
@@ -53,11 +58,17 @@ export default function Tile({
           className={cn(
             "flex flex-col gap-4 opacity-0 transition-all duration-300",
             {
-              "opacity-100": isDescriptionExpanded,
+              "opacity-100": isDescriptionExpanded || inProgress,
             },
           )}
         >
-          <p className="text-left">{description}</p>
+          {inProgress ? (
+            <p className="translate-y-40 text-center text-2xl">
+              Coming soon...
+            </p>
+          ) : (
+            <p className="text-left">{description}</p>
+          )}
           {buttonText &&
             (isLink ? (
               <Button asChild variant="outline" className="self-start">
@@ -74,7 +85,13 @@ export default function Tile({
             ))}
         </div>
         <div className="flex items-center justify-between">
-          <p className="text-2xl">{title}</p>
+          <p
+            className={cn("text-2xl", {
+              "text-white/40": inProgress,
+            })}
+          >
+            {title}
+          </p>
           <Button
             variant="outline"
             size="icon"

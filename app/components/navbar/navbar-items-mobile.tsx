@@ -16,9 +16,11 @@ import {
   Sheet,
   SheetContent,
   SheetDescription,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import Socials from "./socials";
 
 export default function NavbarItemsDesktop() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +29,7 @@ export default function NavbarItemsDesktop() {
   const menuItems = getMenuItems(pathname);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <Button
           variant="ghost"
@@ -42,7 +44,7 @@ export default function NavbarItemsDesktop() {
           className="bg-deep-black h-full text-white"
           showClose={false}
         >
-          <SheetHeader className="h-full px-4 py-2">
+          <SheetHeader className="px-6 py-8">
             <SheetTitle className="flex items-center justify-end text-white">
               <Button
                 variant="ghost"
@@ -53,44 +55,47 @@ export default function NavbarItemsDesktop() {
                 <IoCloseSharp className="size-8 text-white" />
               </Button>
             </SheetTitle>
-            <SheetDescription asChild className="text-white">
-              <ul className="flex h-[calc(100%-128px)] flex-col items-center justify-center gap-10 font-bold">
-                {menuItems.map(({ sectionId, label, isLink }) => {
-                  const buttonClassNames =
-                    "text-2xl uppercase hover:bg-transparent hover:text-white";
-                  const buttonVariant = "ghost";
-
-                  return (
-                    <li key={sectionId}>
-                      {isLink ? (
-                        <Button
-                          type="button"
-                          className={buttonClassNames}
-                          variant={buttonVariant}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <Link href={sectionId}>{label}</Link>
-                        </Button>
-                      ) : (
-                        <Button
-                          type="button"
-                          onClick={() =>
-                            scrollSectionIntoView(sectionId, () =>
-                              setIsOpen(false),
-                            )
-                          }
-                          className={buttonClassNames}
-                          variant={buttonVariant}
-                        >
-                          {label}
-                        </Button>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-            </SheetDescription>
           </SheetHeader>
+          <SheetDescription asChild className="text-white">
+            <ul className="flex h-full flex-col items-center justify-start gap-10 py-6 font-bold">
+              {menuItems.map(({ sectionId, label, isLink }) => {
+                const buttonClassNames =
+                  "text-2xl uppercase hover:bg-transparent hover:text-white";
+                const buttonVariant = "ghost";
+
+                return (
+                  <li key={sectionId}>
+                    {isLink ? (
+                      <Button
+                        type="button"
+                        className={buttonClassNames}
+                        variant={buttonVariant}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <Link href={sectionId}>{label}</Link>
+                      </Button>
+                    ) : (
+                      <Button
+                        type="button"
+                        onClick={() =>
+                          scrollSectionIntoView(sectionId, () =>
+                            setIsOpen(false),
+                          )
+                        }
+                        className={buttonClassNames}
+                        variant={buttonVariant}
+                      >
+                        {label}
+                      </Button>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </SheetDescription>
+          <SheetFooter>
+            <Socials className="mb-10 flex justify-center" />
+          </SheetFooter>
         </SheetContent>
       </Sheet>
     </div>
