@@ -94,7 +94,7 @@ export default function NavbarItemsDesktop() {
             </ul>
           </SheetDescription>
           <SheetFooter>
-            <Socials className="mb-10 flex justify-center" />
+            <Socials variant="mobile" />
           </SheetFooter>
         </SheetContent>
       </Sheet>

@@ -19,7 +19,7 @@ export default function NavbarItemsMobile() {
       <ul className="hidden items-center gap-6 lg:flex">
         {menuItems.map(({ sectionId, label, isLink }) => {
           const buttonClassNames =
-            "hover:text-gold uppercase hover:bg-transparent text-md xl:text-lg";
+            "hover:text-gold uppercase hover:bg-transparent text-md text-xl xl:text-2xl";
           const buttonVariant = "ghost";
 
           return (
@@ -45,7 +45,7 @@ export default function NavbarItemsMobile() {
           );
         })}
       </ul>
-      <Socials className="hidden lg:block" />
+      <Socials variant="desktop" />
     </>
   );
 }

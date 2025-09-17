@@ -14,7 +14,7 @@ export default function OfferSection() {
 
   return (
     <section id="offer" className="section-base pr-0 pl-6">
-      <h2 className="mb-10 text-3xl font-bold">Oferta</h2>
+      <h2 className="section-title mb-10">Oferta</h2>
       <div className="mx-auto flex w-full items-center justify-center">
         <Carousel
           opts={{

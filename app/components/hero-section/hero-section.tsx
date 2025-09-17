@@ -13,7 +13,7 @@ export default function HeroSection() {
       className="relative h-[calc(100vh-96px)] bg-[url(/hero-bg.jpg)] bg-cover bg-center text-center text-white md:h-[calc(100vh-120px)]"
     >
       <div className="absolute inset-0 z-0 flex flex-col items-center justify-center gap-6 bg-black/70">
-        <h1 className="-translate-x-5 -translate-y-4/6 text-4xl font-normal uppercase md:-translate-x-8 md:text-6xl">
+        <h1 className="-translate-x-5 -translate-y-4/6 font-serif text-4xl font-bold uppercase md:-translate-x-8 md:text-6xl">
           <span className="mb-4 block">coś więcej</span>
           <span className="ml-10 block md:ml-16">niż trening</span>
         </h1>

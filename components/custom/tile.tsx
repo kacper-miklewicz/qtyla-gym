@@ -34,13 +34,18 @@ export default function Tile({
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   const toggleDescription = () => {
+    if (inProgress) return;
+
     setIsDescriptionExpanded(!isDescriptionExpanded);
   };
 
   return (
     <div
       className={`h-120 w-full overflow-hidden rounded-lg bg-cover bg-center`}
-      onMouseEnter={() => setIsDescriptionExpanded(true)}
+      onMouseEnter={() => {
+        if (inProgress) return;
+        setIsDescriptionExpanded(true);
+      }}
       onMouseLeave={() => setIsDescriptionExpanded(false)}
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
@@ -97,6 +102,7 @@ export default function Tile({
             size="icon"
             className="rounded-full sm:hidden"
             onClick={toggleDescription}
+            disabled={inProgress}
           >
             <GoPlus
               size={20}
