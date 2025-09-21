@@ -14,7 +14,12 @@ export default function OfferSection() {
 
   return (
     <section id="offer" className="section-base pr-0 pl-6">
-      <h2 className="section-title mb-10">Oferta</h2>
+      <div className="w-full text-left">
+        <h3 className="section-subtitle">więcej niż trening</h3>
+        <h2 className="section-title mb-10">
+          W jaki sposób chcesz o siebie zadbać?
+        </h2>
+      </div>
       <div className="mx-auto flex w-full items-center justify-center">
         <Carousel
           opts={{
@@ -26,7 +31,7 @@ export default function OfferSection() {
             {offerTilesList.map((tile, index) => (
               <CarouselItem
                 key={index}
-                className="md:basis basis-[90%] last:mr-6 sm:basis-[45%] md:basis-[30%] lg:basis-[22.5%] xl:basis-[22.5%] 2xl:basis-[18.5%]"
+                className="md:basis basis-[90%] last:mr-6 sm:basis-[45%] lg:basis-[30%] xl:basis-[22.5%] 2xl:basis-[22.5%]"
               >
                 <Tile
                   title={tile.title}

@@ -1,58 +1,56 @@
+import { scrollSectionIntoView } from "@/app/utils";
 import { TileProps } from "@/components/custom/tile";
 
 export const OFFER_TILES: Record<string, TileProps> = {
   membership: {
     title: "Członkostwo",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros, vitae dictum sem enim nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Dołącz do limitowanej społeczności QTYLA i trenuj w przestrzeni bez tłoku i chaosu. Zarezerwuj swój slot i ciesz się komfortem, jakością i wyjątkową atmosferą.",
     backgroundImageUrl: "/offer/membership.jpg",
-    buttonText: "Tekst",
+    buttonText: "Dołącz",
     isLink: true,
     linkUrl: "/czlonkowstwo",
   },
   personalTraining: {
     title: "Trening personalny",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros, vitae dictum sem enim nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Czas w pełni poświęcony tylko Tobie, w którym trener prowadzi Cię krok po kroku do Twoich celów. To najbardziej indywidualna i skuteczna forma treningu, gwarantująca bezpieczeństwo, pełne zaangażowanie i realne rezultaty.",
     backgroundImageUrl: "/offer/online-cooperation.jpg",
-    buttonText: "Tekst",
+    buttonText: "Zapisz się",
     isLink: true,
     linkUrl: "/trening-personalny",
   },
   semiPersonalTraining: {
-    title: "Trening semipersonalny",
+    title: "Zajęcia grupowe",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros, vitae dictum sem enim nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Trening w małej, kameralnej grupie i energia wspólnego wysiłku. Idealny wybór, jeśli chcesz połączyć atmosferę grupy z indywidualnym wsparciem. Zapisz się na jedne z naszych zajęć i sprawdź, jak działa synergia wspólnego treningu.",
     backgroundImageUrl: "/offer/transform.jpg",
-    buttonText: "Tekst",
+    buttonText: "Zapisz się",
   },
   transform: {
     title: "Transform",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros, vitae dictum sem enim nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Transform to flagowy, limitowany program QTYLA - 12 tygodni pełnego zaangażowania, które zmieniają sylwetkę, zdrowie i podejście do treningu. Indywidualnie dopasowane plany, analiza postępów, wskazówki żywieniowe, kontrola fizjoterapeuty i stałe wsparcie trenera. To nie tylko program - to inwestycja w trwałą zmianę, którą zobaczysz i poczujesz.",
     backgroundImageUrl: "/offer/personal-training.jpg",
-    buttonText: "Tekst",
+    buttonText: "Zapisz się",
     isLink: true,
     linkUrl: "/transform",
   },
   onlineCooperation: {
     title: "Współpraca online",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros, vitae dictum sem enim nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Nie możesz trenować w QTYLA? Nic strasznego. Otrzymaj spersonalizowany plan, wskazówki i wsparcie trenera online - niezależnie od tego, gdzie jesteś. Napisz na qtyla.club@gmail.com lub zadzwoń (klikając schodzisz na sekcję kontakt).",
     backgroundImageUrl: "/offer/semipersonal-training.jpg",
-    buttonText: "Tekst",
+    buttonText: "Skontaktuj się",
+    onButtonClick: () => scrollSectionIntoView("footer"),
   },
   events: {
     title: "Eventy",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros, vitae dictum sem enim nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
     backgroundImageUrl: "/offer/events.jpg",
     inProgress: true,
   },
   wellness: {
     title: "Welness",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisi nisl aliquam eros, vitae dictum sem enim nec erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
     backgroundImageUrl: "/offer/wellness.jpg",
     inProgress: true,
   },

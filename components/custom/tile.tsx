@@ -11,7 +11,7 @@ import { Button } from "../ui/button";
 
 export interface TileProps {
   title: string;
-  description: string;
+  description?: string;
   backgroundImageUrl: string;
   inProgress?: boolean;
   buttonText?: string;
