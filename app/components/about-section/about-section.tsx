@@ -1,21 +1,20 @@
+import { ABOUT_ITEMS } from "./constants";
+
 export default function AboutSection() {
   return (
-    <section
-      id="about"
-      className="section-base flex flex-col gap-10 px-6 py-20 text-center md:gap-16 md:px-8"
-    >
-      <div>
-        <p className="section-content">
-          W codziennym biegu i chaosie Twój trening może być chwilą spokoju i
-          przestrzeni tylko dla Ciebie.
-        </p>
-        <p className="section-content">
-          QTYLA Training Club to miejsce, w którym jakość, komfort i atmosfera
-          społeczności tworzą doświadczenie wykraczające poza zwykłą aktywność
-          fizyczną Naszą filozofią jest świadome podejście do ruchu i życia -
-          wspieramy Cię, abyś krok po kroku osiągał swoją najlepszą wersję.
-        </p>
-      </div>
+    <section id="about" className="section-base">
+      <h2 className="section-title mb-20">O klubie</h2>
+      <ul className="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+        {ABOUT_ITEMS.map(({ title, description, Icon }) => (
+          <li key={title} className="flex max-w-md flex-col items-center gap-6">
+            <Icon className="size-16 flex-shrink-0 text-white" />
+            <div className="flex flex-col gap-4">
+              <h3 className="h-20 text-2xl font-bold uppercase">{title}</h3>
+              <p className="section-content text-xl">{description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

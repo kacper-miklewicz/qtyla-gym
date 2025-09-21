@@ -39,7 +39,7 @@ export const OFFER_TILES: Record<string, TileProps> = {
   onlineCooperation: {
     title: "Współpraca online",
     description:
-      "Nie możesz trenować w QTYLA? Nic strasznego. Otrzymaj spersonalizowany plan, wskazówki i wsparcie trenera online - niezależnie od tego, gdzie jesteś. Napisz na qtyla.club@gmail.com lub zadzwoń (klikając schodzisz na sekcję kontakt).",
+      "Nie możesz trenować w QTYLA? Nic strasznego. Otrzymaj spersonalizowany plan, wskazówki i wsparcie trenera online - niezależnie od tego, gdzie jesteś. Napisz na qtyla.club@gmail.com lub zadzwoń.",
     backgroundImageUrl: "/offer/semipersonal-training.jpg",
     buttonText: "Skontaktuj się",
     onButtonClick: () => scrollSectionIntoView("footer"),
