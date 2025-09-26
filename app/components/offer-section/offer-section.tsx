@@ -2,12 +2,7 @@
 
 import { OFFER_TILES } from "./constants";
 
-import Tile from "@/components/custom/tile";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+import TilesCarousel from "@/components/custom/tiles-carousel";
 
 export default function OfferSection() {
   const offerTilesList = Object.values(OFFER_TILES);
@@ -20,34 +15,7 @@ export default function OfferSection() {
           W jaki sposób chcesz o siebie zadbać?
         </h2>
       </div>
-      <div className="mx-auto flex w-full items-center justify-center">
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          className="w-full"
-        >
-          <CarouselContent>
-            {offerTilesList.map((tile, index) => (
-              <CarouselItem
-                key={index}
-                className="md:basis basis-[90%] last:mr-6 sm:basis-[45%] lg:basis-[30%] xl:basis-[22.5%] 2xl:basis-[22.5%]"
-              >
-                <Tile
-                  title={tile.title}
-                  description={tile.description}
-                  backgroundImageUrl={tile.backgroundImageUrl}
-                  buttonText={tile.buttonText}
-                  onButtonClick={tile.onButtonClick}
-                  isLink={tile.isLink}
-                  linkUrl={tile.linkUrl}
-                  inProgress={tile.inProgress}
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </div>
+      <TilesCarousel tilesList={offerTilesList} />
     </section>
   );
 }

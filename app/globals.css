@@ -188,6 +188,16 @@
   }
 
   .section-content {
-    @apply mx-auto max-w-3xl text-xl font-thin text-white/70 md:text-2xl;
+    @apply text-xl font-thin text-white/70 md:text-2xl;
+  }
+
+  .faq-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .faq-list li::before {
+    content: "- ";
+    margin-right: 4px;
   }
 }

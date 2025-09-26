@@ -30,6 +30,7 @@ export default function Tile({
   onButtonClick,
   isLink,
   linkUrl,
+  linkTarget,
 }: TileProps) {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
@@ -77,7 +78,13 @@ export default function Tile({
           {buttonText &&
             (isLink ? (
               <Button asChild variant="outline" className="self-start">
-                <Link href={linkUrl!}>{buttonText}</Link>
+                <Link
+                  href={linkUrl!}
+                  target={linkTarget}
+                  rel="noopener noreferrer"
+                >
+                  {buttonText}
+                </Link>
               </Button>
             ) : (
               <Button

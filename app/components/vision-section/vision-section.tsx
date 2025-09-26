@@ -2,9 +2,9 @@ export default function VisionSection() {
   return (
     <section
       id="vision"
-      className="section-base flex flex-col gap-10 px-6 py-20 text-center md:gap-16 md:px-8"
+      className="section-base flex flex-col gap-10 px-6 pt-20 pb-20 text-center md:gap-16 md:px-8 md:pt-40"
     >
-      <div>
+      <div className="max-w-3xl">
         <p className="section-content">
           W codziennym biegu i chaosie Twój trening może być chwilą spokoju i
           przestrzeni tylko dla Ciebie.

@@ -9,7 +9,7 @@ export const OFFER_TILES: Record<string, TileProps> = {
     backgroundImageUrl: "/offer/membership.jpg",
     buttonText: "Dołącz",
     isLink: true,
-    linkUrl: "/czlonkowstwo",
+    linkUrl: "/czlonkostwo",
   },
   personalTraining: {
     title: "Trening personalny",
@@ -26,6 +26,9 @@ export const OFFER_TILES: Record<string, TileProps> = {
       "Trening w małej, kameralnej grupie i energia wspólnego wysiłku. Idealny wybór, jeśli chcesz połączyć atmosferę grupy z indywidualnym wsparciem. Zapisz się na jedne z naszych zajęć i sprawdź, jak działa synergia wspólnego treningu.",
     backgroundImageUrl: "/offer/transform.jpg",
     buttonText: "Zapisz się",
+    isLink: true,
+    linkUrl: "https://app.fitssey.com/qtylaclub",
+    linkTarget: "_blank",
   },
   transform: {
     title: "Transform",
