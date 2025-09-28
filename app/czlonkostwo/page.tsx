@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import { FAQ_ITEMS } from "./constants";
 import { FullWidthSection } from "@/components/custom/full-width-section";
+import FAQ from "@/components/custom/faq";
 
 const MembershipPage = () => {
   return (
@@ -29,14 +30,7 @@ const MembershipPage = () => {
       </div>
       <TilesCarousel tilesList={MEMBERSHIP_TILES_LIST} />
       <FullWidthSection title="Nasz FAQ">
-        <Accordion type="single" collapsible>
-          {FAQ_ITEMS.map(({ question, answer }) => (
-            <AccordionItem key={question} value={question}>
-              <AccordionTrigger>{question}</AccordionTrigger>
-              <AccordionContent>{answer}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <FAQ items={FAQ_ITEMS} />
       </FullWidthSection>
       <FullWidthSection title="Cena" className="items-center">
         <p className="section-content">
