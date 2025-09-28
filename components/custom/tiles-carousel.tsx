@@ -1,11 +1,11 @@
-import Tile, { TileProps } from "./tile";
+import { Tile, type TileProps } from "./tile";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
-export interface TilesCarouselProps {
+interface TilesCarouselProps {
   tilesList: TileProps[];
 }
 
-export default function TilesCarousel({ tilesList }: TilesCarouselProps) {
+function TilesCarousel({ tilesList }: TilesCarouselProps) {
   return (
     <div className="mx-auto mb-16 flex w-full items-center justify-center md:mb-20">
       <Carousel
@@ -38,3 +38,5 @@ export default function TilesCarousel({ tilesList }: TilesCarouselProps) {
     </div>
   );
 }
+
+export { TilesCarousel };

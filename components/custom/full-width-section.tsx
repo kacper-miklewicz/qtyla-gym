@@ -6,7 +6,7 @@ export interface FullWidthSectionProps {
   className?: string;
 }
 
-export function FullWidthSection({
+function FullWidthSection({
   title,
   children,
   className,
@@ -25,3 +25,5 @@ export function FullWidthSection({
     </div>
   );
 }
+
+export { FullWidthSection };

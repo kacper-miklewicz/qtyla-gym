@@ -9,7 +9,7 @@ import { GoPlus } from "react-icons/go";
 
 import { Button } from "../ui/button";
 
-export interface TileProps {
+interface TileProps {
   title: string;
   description?: string;
   backgroundImageUrl: string;
@@ -21,7 +21,7 @@ export interface TileProps {
   linkTarget?: HTMLAnchorElement["target"];
 }
 
-export default function Tile({
+function Tile({
   title,
   description,
   backgroundImageUrl,
@@ -124,3 +124,5 @@ export default function Tile({
     </div>
   );
 }
+
+export { Tile, type TileProps };

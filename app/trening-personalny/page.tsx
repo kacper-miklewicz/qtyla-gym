@@ -1,8 +1,10 @@
-import TilesCarousel from "@/components/custom/tiles-carousel";
 import React from "react";
+
 import { PERSONAL_TRAINING_TILES_LIST } from "./constants";
-import { PersonalTrainingTable } from "./personal-training-table";
+
 import { FullWidthSection } from "@/components/custom/full-width-section";
+import { TilesCarousel } from "@/components/custom/tiles-carousel";
+import { PersonalTrainingTable } from "./personal-training-table";
 
 const PersonalTrainingPage = () => {
   return (

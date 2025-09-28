@@ -2,7 +2,7 @@
 
 import { OFFER_TILES } from "./constants";
 
-import TilesCarousel from "@/components/custom/tiles-carousel";
+import { TilesCarousel } from "@/components/custom/tiles-carousel";
 
 export default function OfferSection() {
   const offerTilesList = Object.values(OFFER_TILES);

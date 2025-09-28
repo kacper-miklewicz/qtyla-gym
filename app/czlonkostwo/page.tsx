@@ -1,17 +1,10 @@
 import React from "react";
 
-import { MEMBERSHIP_TILES_LIST } from "./constants";
+import { MEMBERSHIP_TILES_LIST, FAQ_ITEMS } from "./constants";
 
-import TilesCarousel from "@/components/custom/tiles-carousel";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { FAQ_ITEMS } from "./constants";
 import { FullWidthSection } from "@/components/custom/full-width-section";
-import FAQ from "@/components/custom/faq";
+import { TilesCarousel } from "@/components/custom/tiles-carousel";
+import { FAQ } from "@/components/custom/faq";
 
 const MembershipPage = () => {
   return (

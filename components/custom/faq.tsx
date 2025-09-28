@@ -16,7 +16,7 @@ export interface FAQProps {
   items: FAQItem[];
 }
 
-export default function FAQ({ items }: FAQProps) {
+function FAQ({ items }: FAQProps) {
   return (
     <Accordion type="single" collapsible>
       {items.map(({ question, answer }) => (
@@ -28,3 +28,5 @@ export default function FAQ({ items }: FAQProps) {
     </Accordion>
   );
 }
+
+export { FAQ };
