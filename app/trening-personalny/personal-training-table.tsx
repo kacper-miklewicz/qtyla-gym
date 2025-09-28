@@ -9,7 +9,7 @@ import {
 
 export function PersonalTrainingTable() {
   return (
-    <div className="flex w-full max-w-6xl justify-center pr-6">
+    <div className="flex w-full max-w-6xl justify-center">
       <Table className="border text-xl">
         <TableHeader>
           <TableRow>

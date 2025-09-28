@@ -1,5 +1,5 @@
 import { TileProps } from "@/components/custom/tile";
-import type { FAQItem } from "@/components/custom/faq"; // adjust the import path as needed
+import type { FAQItem } from "@/components/custom/faq";
 
 export const PERSONAL_TRAINING_TILES_LIST: TileProps[] = [
   {

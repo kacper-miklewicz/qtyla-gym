@@ -17,7 +17,10 @@ const PersonalTrainingPage = () => {
         <h3 className="section-subtitle pr-6">rozpocznij swoją przygodę</h3>
         <h2 className="section-title mb-10 ml-0 pr-6">Trening personalny</h2>
       </div>
-      <TilesCarousel tilesList={PERSONAL_TRAINING_TILES_LIST} />
+      <TilesCarousel
+        tilesList={PERSONAL_TRAINING_TILES_LIST}
+        itemClassName="xl:basis-[25%] 2xl:basis-[25%] xl:-6"
+      />
       <FullWidthSection title="Cennik" className="md:block lg:flex">
         <PersonalTrainingTable />
       </FullWidthSection>

@@ -1,11 +1,13 @@
 import { Tile, type TileProps } from "./tile";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import { cn } from "@/lib/utils";
 
 interface TilesCarouselProps {
   tilesList: TileProps[];
+  itemClassName?: string;
 }
 
-function TilesCarousel({ tilesList }: TilesCarouselProps) {
+function TilesCarousel({ tilesList, itemClassName }: TilesCarouselProps) {
   return (
     <div className="mx-auto mb-16 flex w-full items-center justify-center md:mb-20">
       <Carousel
@@ -18,7 +20,10 @@ function TilesCarousel({ tilesList }: TilesCarouselProps) {
           {tilesList.map((tile, index) => (
             <CarouselItem
               key={index}
-              className="md:basis basis-[90%] last:mr-6 sm:basis-[45%] lg:basis-[30%] xl:basis-[22.5%] 2xl:basis-[22.5%]"
+              className={cn(
+                "md:basis basis-[90%] last:mr-6 sm:basis-[45%] lg:basis-[30%] xl:basis-[22.5%] 2xl:basis-[22.5%]",
+                itemClassName,
+              )}
             >
               <Tile
                 title={tile.title}

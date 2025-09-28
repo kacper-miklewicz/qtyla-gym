@@ -14,7 +14,7 @@ function FullWidthSection({
   return (
     <div
       className={cn(
-        "mb-10 items-start pr-6 md:mb-16 md:flex lg:mb-20 lg:pr-16",
+        "mb-10 items-start pr-6 md:mb-16 md:flex lg:mb-20",
         className,
       )}
     >
