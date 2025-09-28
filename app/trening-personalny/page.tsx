@@ -1,9 +1,13 @@
 import React from "react";
 
-import { PERSONAL_TRAINING_TILES_LIST } from "./constants";
+import {
+  PERSONAL_TRAINING_FAQ_ITEMS,
+  PERSONAL_TRAINING_TILES_LIST,
+} from "./constants";
 
 import { FullWidthSection } from "@/components/custom/full-width-section";
 import { TilesCarousel } from "@/components/custom/tiles-carousel";
+import { FAQ } from "@/components/custom/faq";
 import { PersonalTrainingTable } from "./personal-training-table";
 
 const PersonalTrainingPage = () => {
@@ -14,8 +18,11 @@ const PersonalTrainingPage = () => {
         <h2 className="section-title mb-10 ml-0 pr-6">Trening personalny</h2>
       </div>
       <TilesCarousel tilesList={PERSONAL_TRAINING_TILES_LIST} />
-      <FullWidthSection title="Cennik">
+      <FullWidthSection title="Cennik" className="md:block lg:flex">
         <PersonalTrainingTable />
+      </FullWidthSection>
+      <FullWidthSection title="FAQ">
+        <FAQ items={PERSONAL_TRAINING_FAQ_ITEMS} />
       </FullWidthSection>
     </main>
   );

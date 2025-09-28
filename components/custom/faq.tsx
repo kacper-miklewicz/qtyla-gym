@@ -12,7 +12,7 @@ interface FAQItem {
   answer: ReactNode;
 }
 
-export interface FAQProps {
+interface FAQProps {
   items: FAQItem[];
 }
 
@@ -29,4 +29,4 @@ function FAQ({ items }: FAQProps) {
   );
 }
 
-export { FAQ };
+export { FAQ, type FAQItem };
