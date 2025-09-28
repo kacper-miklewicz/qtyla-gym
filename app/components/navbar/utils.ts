@@ -11,9 +11,15 @@ export const getMenuItems = (pathname: string) => {
     return MENU_ITEMS;
   }
 
-  return MENU_ITEMS.map((item) => ({
-    ...item,
-    sectionId: `/#${item.sectionId}`,
-    isLink: true,
-  }));
+  return MENU_ITEMS.map((item) => {
+    if (item.isLink) {
+      return item;
+    }
+
+    return {
+      ...item,
+      sectionId: `/#${item.sectionId}`,
+      isLink: true,
+    };
+  });
 };

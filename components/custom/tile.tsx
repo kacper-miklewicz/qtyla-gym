@@ -55,7 +55,7 @@ export default function Tile({
           "flex h-full flex-col justify-between bg-black/40 px-6 py-10 text-white transition-all duration-300",
           {
             "bg-black/55 backdrop-blur-xs":
-              isDescriptionExpanded && !inProgress,
+              !!description && isDescriptionExpanded && !inProgress,
             "backdrop-blur-xs": inProgress,
           },
         )}
@@ -64,7 +64,8 @@ export default function Tile({
           className={cn(
             "flex flex-col gap-4 opacity-0 transition-all duration-300",
             {
-              "opacity-100": isDescriptionExpanded || inProgress,
+              "opacity-100":
+                (!!description && isDescriptionExpanded) || inProgress,
             },
           )}
         >

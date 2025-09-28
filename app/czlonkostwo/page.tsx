@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { FAQ_ITEMS } from "./constants";
+import { FullWidthSection } from "@/components/custom/full-width-section";
 
 const MembershipPage = () => {
   return (
@@ -27,29 +28,21 @@ const MembershipPage = () => {
         </p>
       </div>
       <TilesCarousel tilesList={MEMBERSHIP_TILES_LIST} />
-      <div className="py-10 pt-20 pr-6 md:flex lg:pr-16">
-        <h3 className="mb-6 basis-1/3 text-4xl font-bold md:text-5xl lg:basis-2/5 lg:pl-10 lg:text-6xl">
-          Nasz FAQ
-        </h3>
-        <div className="basis-2/3 lg:basis-3/5">
-          <Accordion type="single" collapsible>
-            {FAQ_ITEMS.map(({ question, answer }) => (
-              <AccordionItem key={question} value={question}>
-                <AccordionTrigger>{question}</AccordionTrigger>
-                <AccordionContent>{answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </div>
-      <div className="items-center pr-6 md:flex lg:pr-16">
-        <h3 className="mb-6 basis-1/3 text-4xl font-bold md:text-5xl lg:basis-2/5 lg:pl-10 lg:text-6xl">
-          Cena
-        </h3>
+      <FullWidthSection title="Nasz FAQ">
+        <Accordion type="single" collapsible>
+          {FAQ_ITEMS.map(({ question, answer }) => (
+            <AccordionItem key={question} value={question}>
+              <AccordionTrigger>{question}</AccordionTrigger>
+              <AccordionContent>{answer}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </FullWidthSection>
+      <FullWidthSection title="Cena" className="items-center">
         <p className="section-content">
           Subskrypcja klubowa wynosi 350 PLN/miesiąc
         </p>
-      </div>
+      </FullWidthSection>
     </main>
   );
 };

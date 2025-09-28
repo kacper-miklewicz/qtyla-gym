@@ -7,7 +7,7 @@ export interface TilesCarouselProps {
 
 export default function TilesCarousel({ tilesList }: TilesCarouselProps) {
   return (
-    <div className="mx-auto flex w-full items-center justify-center">
+    <div className="mx-auto mb-16 flex w-full items-center justify-center md:mb-20">
       <Carousel
         opts={{
           align: "start",
