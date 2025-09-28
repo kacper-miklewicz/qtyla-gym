@@ -4,7 +4,7 @@ import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 
 export interface SocialsProps {
-  variant: "mobile" | "desktop";
+  variant: "mobile" | "desktop" | "universal";
 }
 
 const socialsItems = [
@@ -25,6 +25,7 @@ export default function Socials({ variant }: SocialsProps) {
       className={cn({
         "mb-10 flex justify-center": variant === "mobile",
         "hidden lg:block": variant === "desktop",
+        block: variant === "universal",
       })}
     >
       <ul className="flex items-center gap-6">

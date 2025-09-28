@@ -1,37 +1,85 @@
+import Image from "next/image";
+import { BsTelephoneFill } from "react-icons/bs";
+import { FaEnvelope, FaHouse } from "react-icons/fa6";
+import { ContactItem } from "./contact-item";
+import Socials from "@/app/components/navbar/socials"; // Adjust the import path if needed
+
 export default function Footer() {
   return (
-    <footer
-      id="footer"
-      className="bg-concrete flex flex-col items-center justify-between gap-10 px-6 py-8 text-white md:flex-row"
-    >
-      <div className="w-4/5 overflow-hidden rounded-md md:w-1/2">
-        <iframe
-          className="h-[350px] w-full"
-          loading="lazy"
-          allowFullScreen
-          src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_f9RgCxAkcRY67QXaQJRUU&key=${process.env.GOOGLE_MAPS_API_KEY}`}
-        />
-      </div>
-      <div className="h-full w-4/5 md:w-1/2">
-        <div className="mb-5">
-          <h2 className="mb-2 text-lg font-bold uppercase">
-            qtyla training club
-          </h2>
-          <p className="mb-1">ul. Ogrodowa 14, Kwidzyn</p>
-          <p className="mb-1">
-            Nr telefonu: <a href="tel:+48123456789">(+48) 123 456 789</a>
-          </p>
-          <p>Email: info@qtyla.com</p>
+    <footer id="footer" className="bg-deep-black py-12">
+      <div className="flex w-full flex-col gap-10 bg-white/5 p-0 shadow-2xl backdrop-blur-md md:flex-row md:gap-0">
+        <div className="flex w-full flex-col justify-between rounded-none bg-black/60 px-6 text-white shadow-none md:w-1/2 md:pr-12 lg:px-10">
+          <div>
+            <div className="mb-8 flex items-center gap-4">
+              <Image
+                src="/logo-minimalistic-white.png"
+                alt="QTYLA Club Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+                priority
+              />
+              <h3 className="text-primary-400 text-2xl font-bold tracking-widest uppercase xl:text-3xl">
+                Kontakt
+              </h3>
+            </div>
+            <div className="flex flex-col gap-4">
+              <a
+                className="hover:text-primary-400 transition-colors"
+                href="tel:+48533877837"
+              >
+                <ContactItem icon={BsTelephoneFill}>533 877 837</ContactItem>
+              </a>
+              <a
+                className="hover:text-primary-400 transition-colors"
+                href="mailto:info@qtyla.com"
+              >
+                <ContactItem icon={FaEnvelope}>info@qtyla.com</ContactItem>
+              </a>
+              <ContactItem icon={FaHouse}>
+                <address className="not-italic">
+                  <p>82-500 Kwidzyn</p>
+                  <p>ul. Ogrodowa 14</p>
+                </address>
+              </ContactItem>
+            </div>
+          </div>
+          <div className="md:flex-start mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 md:justify-between lg:flex-row">
+            <div>
+              <h4 className="text-primary-400 mb-2 text-base font-semibold xl:mb-6 xl:text-2xl">
+                Godziny otwarcia
+              </h4>
+              <p className="mb-1 xl:text-xl">
+                <span className="font-semibold whitespace-nowrap">
+                  Poniedziałek - piątek:
+                </span>{" "}
+                6:00 - 21:00
+              </p>
+              <p className="xl:text-xl">
+                <span className="font-semibold whitespace-nowrap">
+                  Sobota, niedziela:
+                </span>{" "}
+                9:00 - 15:00
+              </p>
+            </div>
+            <div className="mt-6 flex justify-center lg:mt-0 lg:ml-8">
+              <Socials variant="universal" />
+            </div>
+          </div>
         </div>
-
-        <h2 className="mb-2 text-lg font-bold uppercase">Godziny otwarcia</h2>
-        <p className="mb-1">
-          <span className="font-semibold">Poniedziałek - piątek:</span> 6:00 -
-          21:00
-        </p>
-        <p className="mb-1">
-          <span className="font-semibold">Sobota, niedziela:</span> 9:00 - 15:00
-        </p>
+        <div className="flex w-full items-center justify-center rounded-none p-0 shadow-none md:w-1/2">
+          <iframe
+            className="h-120 w-full rounded-none border-0"
+            loading="lazy"
+            allowFullScreen
+            src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn_f9RgCxAkcRY67QXaQJRUU&key=${process.env.GOOGLE_MAPS_API_KEY}`}
+            title="QTYLA Club Location"
+          />
+        </div>
+      </div>
+      <div className="mt-8 text-center text-xs text-white/40">
+        &copy; {new Date().getFullYear()} QTYLA Training Club. Wszelkie prawa
+        zastrzeżone.
       </div>
     </footer>
   );
