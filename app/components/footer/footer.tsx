@@ -10,8 +10,8 @@ import { ContactItem } from "./contact-item";
 export default function Footer() {
   return (
     <footer id="footer" className="bg-deep-black py-12">
-      <div className="flex w-full flex-col gap-10 bg-white/5 p-0 shadow-2xl backdrop-blur-md md:flex-row md:gap-0">
-        <div className="flex w-full flex-col justify-between rounded-none bg-black/60 px-6 text-white shadow-none md:w-1/2 md:pr-12 lg:px-10">
+      <div className="flex w-full flex-col gap-10 p-0 shadow-2xl backdrop-blur-md md:flex-row md:gap-0">
+        <div className="flex w-full flex-col justify-between rounded-none px-6 text-white shadow-none md:w-1/2 md:pr-12 lg:px-10">
           <div>
             <div className="mb-8 flex items-center gap-4">
               <Image

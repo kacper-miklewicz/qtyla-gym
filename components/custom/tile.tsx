@@ -105,20 +105,22 @@ function Tile({
           >
             {title}
           </p>
-          <Button
-            variant="outline"
-            size="icon"
-            className="rounded-full sm:hidden"
-            onClick={toggleDescription}
-            disabled={inProgress}
-          >
-            <GoPlus
-              size={20}
-              className={cn("!h-6 !w-6 transition-all duration-300", {
-                "rotate-45": isDescriptionExpanded,
-              })}
-            />
-          </Button>
+          {description && (
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full sm:hidden"
+              onClick={toggleDescription}
+              disabled={inProgress}
+            >
+              <GoPlus
+                size={20}
+                className={cn("!h-6 !w-6 transition-all duration-300", {
+                  "rotate-45": isDescriptionExpanded,
+                })}
+              />
+            </Button>
+          )}
         </div>
       </div>
     </div>

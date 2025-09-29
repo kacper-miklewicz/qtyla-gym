@@ -10,10 +10,18 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative h-[calc(100vh-96px)] bg-[url(/hero-bg.jpg)] bg-cover bg-center text-center text-white md:h-[calc(100vh-120px)]"
+      className="relative h-lvh bg-cover bg-center text-center text-white"
     >
-      <div className="absolute inset-0 z-0 flex flex-col items-center justify-center gap-6 bg-black/70">
-        <h1 className="font-subheading -translate-x-5 -translate-y-4/6 text-4xl font-bold uppercase md:-translate-x-8 md:text-6xl">
+      <video
+        className="absolute inset-0 z-0 h-full w-full object-cover"
+        src="/hero-video.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6 bg-black/70">
+        <h1 className="font-subheading -translate-x-5 text-4xl font-bold uppercase md:-translate-x-8 md:text-6xl">
           <span className="mb-4 block">coś więcej</span>
           <span className="ml-10 block md:ml-16">niż trening</span>
         </h1>
@@ -23,7 +31,7 @@ export default function HeroSection() {
         size="icon"
         asChild
         onClick={() => scrollSectionIntoView("vision")}
-        className="hover:text-gold absolute bottom-10 left-1/2 -translate-x-1/2 transform text-white hover:bg-transparent"
+        className="hover:text-gold absolute bottom-10 left-1/2 z-20 -translate-x-1/2 transform text-white hover:bg-transparent"
       >
         <IoChevronDown className="h-14 w-14" />
       </Button>
