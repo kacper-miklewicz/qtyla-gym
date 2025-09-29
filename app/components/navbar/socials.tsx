@@ -1,6 +1,9 @@
 import { cn } from "@/lib/utils";
 
 import { FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa6";
+
+import { QTYLA_EMAIL } from "../constants";
+
 import { Button } from "@/components/ui/button";
 
 export interface SocialsProps {
@@ -16,7 +19,7 @@ const socialsItems = [
     Icon: FaFacebook,
     href: "https://www.facebook.com/profile.php?id=61579487471098",
   },
-  { Icon: FaEnvelope, href: "mailto:qtyla.club@gmail.com" },
+  { Icon: FaEnvelope, href: `mailto:${QTYLA_EMAIL}` },
 ];
 
 export default function Socials({ variant }: SocialsProps) {

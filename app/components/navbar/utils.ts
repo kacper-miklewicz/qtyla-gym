@@ -1,8 +1,15 @@
+import { isExternal } from "util/types";
+
 const MENU_ITEMS = [
   { label: "o klubie", sectionId: "about" },
   { label: "treningi", sectionId: "offer" },
   { label: "członkostwo", sectionId: "czlonkostwo", isLink: true },
-  { label: "grafik", sectionId: "schedule" },
+  {
+    label: "grafik",
+    isLink: true,
+    isExternal: true,
+    href: "https://app.fitssey.com/qtylaclub",
+  },
   { label: "kontakt", sectionId: "footer" },
 ];
 

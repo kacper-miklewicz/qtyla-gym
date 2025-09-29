@@ -10,7 +10,7 @@ const MembershipPage = () => {
   return (
     <main className="bg-deep-black pt-10 pb-10 pl-6 text-white md:pt-24">
       <div className="w-full text-left">
-        <h3 className="section-subtitle pr-6">dołącz do qtyla fitness club</h3>
+        <h3 className="section-subtitle pr-6">dołącz do qtyla training club</h3>
         <h2 className="section-title mb-10 ml-0 pr-6">
           Bądź częścią czegoś większego
         </h2>

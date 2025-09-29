@@ -1,4 +1,7 @@
+import { QTYLA_EMAIL } from "../constants";
+
 import { scrollSectionIntoView } from "@/app/utils";
+
 import { TileProps } from "@/components/custom/tile";
 
 export const OFFER_TILES: Record<string, TileProps> = {
@@ -41,8 +44,7 @@ export const OFFER_TILES: Record<string, TileProps> = {
   },
   onlineCooperation: {
     title: "Współpraca online",
-    description:
-      "Nie możesz trenować w QTYLA? Nic strasznego. Otrzymaj spersonalizowany plan, wskazówki i wsparcie trenera online - niezależnie od tego, gdzie jesteś. Napisz na qtyla.club@gmail.com lub zadzwoń.",
+    description: `Nie możesz trenować w QTYLA? Nic strasznego. Otrzymaj spersonalizowany plan, wskazówki i wsparcie trenera online - niezależnie od tego, gdzie jesteś. Napisz na ${QTYLA_EMAIL} lub zadzwoń.`,
     backgroundImageUrl: "/offer/semipersonal-training.jpg",
     buttonText: "Skontaktuj się",
     onButtonClick: () => scrollSectionIntoView("footer"),
@@ -53,7 +55,7 @@ export const OFFER_TILES: Record<string, TileProps> = {
     inProgress: true,
   },
   wellness: {
-    title: "Welness",
+    title: "Wellness",
     backgroundImageUrl: "/offer/wellness.jpg",
     inProgress: true,
   },

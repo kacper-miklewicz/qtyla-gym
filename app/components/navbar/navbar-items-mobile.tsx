@@ -58,39 +58,43 @@ export default function NavbarItemsDesktop() {
           </SheetHeader>
           <SheetDescription asChild className="text-white">
             <ul className="flex h-full flex-col items-center justify-start gap-10 py-6 font-bold">
-              {menuItems.map(({ sectionId, label, isLink }) => {
-                const buttonClassNames =
-                  "text-2xl uppercase hover:bg-transparent hover:text-white";
-                const buttonVariant = "ghost";
+              {menuItems.map(
+                ({ sectionId, label, isLink, isExternal, href }) => {
+                  const buttonClassNames =
+                    "text-2xl uppercase hover:bg-transparent hover:text-white";
+                  const buttonVariant = "ghost";
 
-                return (
-                  <li key={sectionId}>
-                    {isLink ? (
-                      <Button
-                        type="button"
-                        className={buttonClassNames}
-                        variant={buttonVariant}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <Link href={sectionId}>{label}</Link>
-                      </Button>
-                    ) : (
-                      <Button
-                        type="button"
-                        onClick={() =>
-                          scrollSectionIntoView(sectionId, () =>
-                            setIsOpen(false),
-                          )
-                        }
-                        className={buttonClassNames}
-                        variant={buttonVariant}
-                      >
-                        {label}
-                      </Button>
-                    )}
-                  </li>
-                );
-              })}
+                  const linkHref = isExternal ? href : sectionId;
+
+                  return (
+                    <li key={label}>
+                      {isLink ? (
+                        <Button
+                          type="button"
+                          className={buttonClassNames}
+                          variant={buttonVariant}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <Link href={linkHref!}>{label}</Link>
+                        </Button>
+                      ) : (
+                        <Button
+                          type="button"
+                          onClick={() =>
+                            scrollSectionIntoView(sectionId!, () =>
+                              setIsOpen(false),
+                            )
+                          }
+                          className={buttonClassNames}
+                          variant={buttonVariant}
+                        >
+                          {label}
+                        </Button>
+                      )}
+                    </li>
+                  );
+                },
+              )}
             </ul>
           </SheetDescription>
           <SheetFooter>

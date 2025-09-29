@@ -17,24 +17,32 @@ export default function NavbarItemsMobile() {
   return (
     <>
       <ul className="hidden items-center gap-6 lg:flex">
-        {menuItems.map(({ sectionId, label, isLink }) => {
+        {menuItems.map(({ sectionId, label, isLink, isExternal, href }) => {
           const buttonClassNames =
             "hover:text-gold uppercase hover:bg-transparent text-md text-xl xl:text-2xl";
           const buttonVariant = "ghost";
 
+          const linkHref = isExternal ? href : sectionId;
+
           return (
-            <li key={sectionId}>
+            <li key={label}>
               {isLink ? (
                 <Button
                   asChild
                   variant={buttonVariant}
                   className={buttonClassNames}
                 >
-                  <Link href={sectionId}>{label}</Link>
+                  <Link
+                    href={linkHref!}
+                    target={isExternal ? "_blank" : "_self"}
+                    rel="noopener noreferrer"
+                  >
+                    {label}
+                  </Link>
                 </Button>
               ) : (
                 <Button
-                  onClick={() => scrollSectionIntoView(sectionId)}
+                  onClick={() => scrollSectionIntoView(sectionId!)}
                   variant={buttonVariant}
                   className={buttonClassNames}
                 >

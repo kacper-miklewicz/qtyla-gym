@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaEnvelope, FaHouse } from "react-icons/fa6";
+
+import { QTYLA_EMAIL, QTYLA_PHONE, QTYLA_PHONE_DISPLAY } from "../constants";
+
+import Socials from "@/app/components/navbar/socials";
 import { ContactItem } from "./contact-item";
-import Socials from "@/app/components/navbar/socials"; // Adjust the import path if needed
 
 export default function Footer() {
   return (
@@ -26,15 +29,17 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <a
                 className="hover:text-primary-400 transition-colors"
-                href="tel:+48533877837"
+                href={`tel:${QTYLA_PHONE}`}
               >
-                <ContactItem icon={BsTelephoneFill}>533 877 837</ContactItem>
+                <ContactItem icon={BsTelephoneFill}>
+                  {QTYLA_PHONE_DISPLAY}
+                </ContactItem>
               </a>
               <a
                 className="hover:text-primary-400 transition-colors"
-                href="mailto:info@qtyla.com"
+                href={`mailto:${QTYLA_EMAIL}`}
               >
-                <ContactItem icon={FaEnvelope}>info@qtyla.com</ContactItem>
+                <ContactItem icon={FaEnvelope}>{QTYLA_EMAIL}</ContactItem>
               </a>
               <ContactItem icon={FaHouse}>
                 <address className="not-italic">
@@ -51,13 +56,13 @@ export default function Footer() {
               </h4>
               <p className="mb-1 xl:text-xl">
                 <span className="font-semibold whitespace-nowrap">
-                  Poniedziałek - piątek:
+                  Poniedziałek - sobota:
                 </span>{" "}
-                6:00 - 21:00
+                8:00 - 22:00
               </p>
               <p className="xl:text-xl">
                 <span className="font-semibold whitespace-nowrap">
-                  Sobota, niedziela:
+                  Niedziela:
                 </span>{" "}
                 9:00 - 15:00
               </p>
