@@ -6,7 +6,7 @@
 @theme inline {
   --font-sans: var(--font-epunda-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-lora);
+  --font-serif: var(--font-domine);
   --font-subheading: var(--font-bebas);
 
   --color-background: var(--background);

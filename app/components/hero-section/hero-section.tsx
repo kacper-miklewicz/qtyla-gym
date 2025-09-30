@@ -21,9 +21,10 @@ export default function HeroSection() {
         playsInline
       />
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6 bg-black/70">
-        <h1 className="font-subheading -translate-x-5 text-4xl font-bold uppercase md:-translate-x-8 md:text-6xl">
-          <span className="mb-4 block">coś więcej</span>
-          <span className="ml-10 block md:ml-16">niż trening</span>
+        <h1 className="font-serif text-4xl font-bold uppercase md:text-6xl">
+          {/* <span className="mb-4 block">coś więcej</span>
+          <span className="ml-10 block md:ml-16">niż trening</span> */}
+          Coś więcej niż trening
         </h1>
       </div>
       <Button

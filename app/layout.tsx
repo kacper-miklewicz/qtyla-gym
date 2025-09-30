@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Lora, Bebas_Neue } from "next/font/google";
+import { Geist_Mono, Bebas_Neue, Domine } from "next/font/google";
 import localFont from "next/font/local";
 
 import { Navbar } from "./components/navbar";
@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const lora = Lora({
-  variable: "--font-lora",
+const domine = Domine({
+  variable: "--font-domine",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body
-        className={`${geistMono.variable} ${lora.variable} ${bebasNeue.variable} ${epundaSans.variable} font-sans antialiased`}
+        className={`${geistMono.variable} ${domine.variable} ${bebasNeue.variable} ${epundaSans.variable} font-sans antialiased`}
       >
         <Navbar />
         {children}
