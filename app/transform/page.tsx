@@ -1,11 +1,12 @@
 import React from "react";
 
+import { TRANSFORM_FAQ_ITEMS, TRANSFORM_TILES_LIST } from "./constants";
+
 import { FullWidthSection } from "@/components/custom/full-width-section";
 import { TilesCarousel } from "@/components/custom/tiles-carousel";
 import { FAQ } from "@/components/custom/faq";
 import { SignUpButton } from "../components/sign-up-button";
-
-import { TRANSFORM_FAQ_ITEMS, TRANSFORM_TILES_LIST } from "./constants";
+import { TransformForm } from "./transform-form";
 
 const TransformPage = () => {
   return (
@@ -39,7 +40,7 @@ const TransformPage = () => {
         </p>
       </FullWidthSection>
       <FullWidthSection title="Podejmij się wyzwania" id="sign-up-form">
-        Formularz zapisu
+        <TransformForm />
       </FullWidthSection>
     </main>
   );
