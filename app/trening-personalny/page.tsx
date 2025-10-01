@@ -8,8 +8,9 @@ import {
 import { FullWidthSection } from "@/components/custom/full-width-section";
 import { TilesCarousel } from "@/components/custom/tiles-carousel";
 import { FAQ } from "@/components/custom/faq";
-import { PersonalTrainingTable } from "./personal-training-table";
 import { SignUpButton } from "../components/sign-up-button";
+import { PersonalTrainingTable } from "./personal-training-table";
+import { PersonalTrainingForm } from "./personal-training-form";
 
 const PersonalTrainingPage = () => {
   return (
@@ -30,7 +31,7 @@ const PersonalTrainingPage = () => {
         <FAQ items={PERSONAL_TRAINING_FAQ_ITEMS} />
       </FullWidthSection>
       <FullWidthSection title="Umów się na trening" id="sign-up-form">
-        Formularz zapisu
+        <PersonalTrainingForm />
       </FullWidthSection>
     </main>
   );
