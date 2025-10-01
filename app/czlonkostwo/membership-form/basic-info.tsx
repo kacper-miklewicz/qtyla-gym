@@ -1,7 +1,5 @@
 import { useFormContext } from "react-hook-form";
 
-import { CheckedState } from "@radix-ui/react-checkbox";
-import { Checkbox } from "@/components/ui/checkbox";
 import {
   FormControl,
   FormField,
@@ -64,25 +62,6 @@ const BasicInfo = () => {
             <FormControl>
               <Input {...field} />
             </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
-        name="currentMember"
-        render={({ field }) => (
-          <FormItem className="flex flex-row items-center space-y-0 space-x-2">
-            <FormControl>
-              <Checkbox
-                className="size-5"
-                checked={field.value as CheckedState}
-                onCheckedChange={field.onChange}
-              />
-            </FormControl>
-            <FormLabel className="font-normal">
-              Jestem już członkiem klubu
-            </FormLabel>
             <FormMessage />
           </FormItem>
         )}

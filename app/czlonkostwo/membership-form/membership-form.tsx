@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -9,6 +10,8 @@ import {
   PREFERRED_COOPERATION_PERIOD_OPTIONS,
 } from "@/app/constants";
 
+import { CheckedState } from "@radix-ui/react-checkbox";
+
 import {
   Form,
   FormField,
@@ -18,12 +21,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
-
 import { Checkbox } from "@/components/ui/checkbox";
-import { CheckedState } from "@radix-ui/react-checkbox";
-import Link from "next/link";
+import { TrainingPreferences } from "./membership-preferences";
 import { BasicInfo } from "./basic-info";
-import { TrainingPreferences } from "./training-preferences";
 
 const formSchema = z.object({
   name: z.string().min(2, "Imię musi mieć co najmniej 2 znaki"),
@@ -33,7 +33,6 @@ const formSchema = z.object({
     .regex(/^\+?[0-9\s\-()]+$/, "Nieprawidłowy numer telefonu")
     .min(9, "Numer telefonu musi mieć co najmniej 9 znaków"),
   email: z.email("Nieprawidłowy adres email"),
-  currentMember: z.boolean(),
   preferredHours: z.enum(PREFERRED_HOURS_OPTIONS),
   preferredCooperationPeriod: z
     .enum(PREFERRED_COOPERATION_PERIOD_OPTIONS)
@@ -47,17 +46,16 @@ const formSchema = z.object({
   }),
 });
 
-type PersonalTrainingFormValues = z.infer<typeof formSchema>;
+type MembershipFormValues = z.infer<typeof formSchema>;
 
-function PersonalTrainingForm() {
-  const form = useForm<PersonalTrainingFormValues>({
+function MembershipForm() {
+  const form = useForm<MembershipFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       surname: "",
       phoneNumber: "",
       email: "",
-      currentMember: false,
       preferredHours: "6-9",
       preferredCooperationPeriod: undefined,
       customMessage: "",
@@ -66,7 +64,7 @@ function PersonalTrainingForm() {
     mode: "onTouched",
   });
 
-  function onSubmit(values: PersonalTrainingFormValues) {
+  function onSubmit(values: MembershipFormValues) {
     console.log(values);
   }
 
@@ -127,4 +125,4 @@ function PersonalTrainingForm() {
   );
 }
 
-export { PersonalTrainingForm };
+export { MembershipForm };

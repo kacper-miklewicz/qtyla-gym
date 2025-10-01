@@ -5,6 +5,7 @@ import { MEMBERSHIP_TILES_LIST, FAQ_ITEMS } from "./constants";
 import { FullWidthSection } from "@/components/custom/full-width-section";
 import { TilesCarousel } from "@/components/custom/tiles-carousel";
 import { FAQ } from "@/components/custom/faq";
+import { MembershipForm } from "./membership-form";
 
 const MembershipPage = () => {
   return (
@@ -29,6 +30,9 @@ const MembershipPage = () => {
         <p className="section-content">
           Subskrypcja klubowa wynosi 350 PLN/miesiąc
         </p>
+      </FullWidthSection>
+      <FullWidthSection title="Dołącz do nas" id="sign-up-form">
+        <MembershipForm />
       </FullWidthSection>
     </main>
   );
