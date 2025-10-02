@@ -1,3 +1,5 @@
+import { PHOTOS_PATHS } from "./constants";
+
 import {
   Carousel,
   CarouselContent,
@@ -5,9 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
-
-import { PHOTOS_PATHS } from "./constants";
+import { Photo } from "./photo";
 
 export default function PhotosSection() {
   return (
@@ -21,13 +21,7 @@ export default function PhotosSection() {
         <CarouselContent>
           {PHOTOS_PATHS.map((path, index) => (
             <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/5">
-              <div className="p-1">
-                <Card className="rounded-none">
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-3xl font-semibold">{path}</span>
-                  </CardContent>
-                </Card>
-              </div>
+              <Photo path={path} index={index} />
             </CarouselItem>
           ))}
         </CarouselContent>
