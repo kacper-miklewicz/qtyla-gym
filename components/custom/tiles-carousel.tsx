@@ -1,5 +1,11 @@
 import { Tile, type TileProps } from "./tile";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 import { cn } from "@/lib/utils";
 
 interface TilesCarouselProps {
@@ -14,7 +20,7 @@ function TilesCarousel({ tilesList, itemClassName }: TilesCarouselProps) {
         opts={{
           align: "start",
         }}
-        className="w-full"
+        className="w-full sm:pb-10"
       >
         <CarouselContent>
           {tilesList.map((tile, index) => (
@@ -39,6 +45,12 @@ function TilesCarousel({ tilesList, itemClassName }: TilesCarouselProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <div className="absolute bottom-0 left-12 z-10 hidden text-white sm:block">
+          <CarouselPrevious />
+        </div>
+        <div className="absolute bottom-0 left-20 z-10 hidden text-white sm:block">
+          <CarouselNext />
+        </div>
       </Carousel>
     </div>
   );
