@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { useSendEmail } from "@/app/hooks/useSendEmail";
+
 import { PREFERRED_HOURS_OPTIONS } from "@/app/constants";
 
 import { CheckedState } from "@radix-ui/react-checkbox";
@@ -60,8 +62,10 @@ function TransformForm() {
     mode: "onTouched",
   });
 
+  const { triggerSendEmail, isSending } = useSendEmail();
+
   function onSubmit(values: TransformFormValues) {
-    console.log(values);
+    triggerSendEmail("Transform", values);
   }
 
   return (
@@ -112,13 +116,15 @@ function TransformForm() {
           type="submit"
           className="w-full md:w-40"
           size="lg"
-          disabled={!form.formState.isValid || form.formState.isSubmitting}
+          disabled={
+            !form.formState.isValid || form.formState.isSubmitting || isSending
+          }
         >
-          Wyślij zapytanie
+          {isSending ? "Wysyłanie..." : "Wyślij zapytanie"}
         </Button>
       </form>
     </Form>
   );
 }
 
-export { TransformForm };
+export { TransformForm, type TransformFormValues };

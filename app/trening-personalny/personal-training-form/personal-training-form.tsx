@@ -1,13 +1,19 @@
 "use client";
 
+import Link from "next/link";
+
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+
+import { useSendEmail } from "@/app/hooks/useSendEmail";
 
 import {
   PREFERRED_HOURS_OPTIONS,
   PREFERRED_COOPERATION_PERIOD_OPTIONS,
 } from "@/app/constants";
+
+import { CheckedState } from "@radix-ui/react-checkbox";
 
 import {
   Form,
@@ -18,10 +24,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
-
 import { Checkbox } from "@/components/ui/checkbox";
-import { CheckedState } from "@radix-ui/react-checkbox";
-import Link from "next/link";
 import { BasicInfo } from "./basic-info";
 import { TrainingPreferences } from "./training-preferences";
 
@@ -66,8 +69,10 @@ function PersonalTrainingForm() {
     mode: "onTouched",
   });
 
+  const { triggerSendEmail, isSending } = useSendEmail();
+
   function onSubmit(values: PersonalTrainingFormValues) {
-    console.log(values);
+    triggerSendEmail("Trening Personalny", values);
   }
 
   return (
@@ -118,13 +123,15 @@ function PersonalTrainingForm() {
           type="submit"
           className="w-full md:w-40"
           size="lg"
-          disabled={!form.formState.isValid || form.formState.isSubmitting}
+          disabled={
+            !form.formState.isValid || form.formState.isSubmitting || isSending
+          }
         >
-          Wyślij zapytanie
+          {isSending ? "Wysyłanie..." : "Wyślij zapytanie"}
         </Button>
       </form>
     </Form>
   );
 }
 
-export { PersonalTrainingForm };
+export { PersonalTrainingForm, type PersonalTrainingFormValues };

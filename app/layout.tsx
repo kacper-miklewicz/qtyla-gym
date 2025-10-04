@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist_Mono, Bebas_Neue, Domine } from "next/font/google";
 import localFont from "next/font/local";
 
+import { Toaster } from "@/components/ui/sonner";
+import { EmailJSProvider } from "./components/emailjs-provider";
 import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
 
@@ -46,8 +48,9 @@ export default function RootLayout({
         className={`${geistMono.variable} ${domine.variable} ${bebasNeue.variable} ${epundaSans.variable} font-sans antialiased`}
       >
         <Navbar />
-        {children}
+        <EmailJSProvider>{children}</EmailJSProvider>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

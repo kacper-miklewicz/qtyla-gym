@@ -1,9 +1,12 @@
 "use client";
+
 import Link from "next/link";
 
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+
+import { useSendEmail } from "@/app/hooks/useSendEmail";
 
 import {
   PREFERRED_HOURS_OPTIONS,
@@ -64,8 +67,10 @@ function MembershipForm() {
     mode: "onTouched",
   });
 
+  const { triggerSendEmail, isSending } = useSendEmail();
+
   function onSubmit(values: MembershipFormValues) {
-    console.log(values);
+    triggerSendEmail("Członkostwo", values);
   }
 
   return (
@@ -116,13 +121,15 @@ function MembershipForm() {
           type="submit"
           className="w-full md:w-40"
           size="lg"
-          disabled={!form.formState.isValid || form.formState.isSubmitting}
+          disabled={
+            !form.formState.isValid || form.formState.isSubmitting || isSending
+          }
         >
-          Wyślij zapytanie
+          {isSending ? "Wysyłanie..." : "Wyślij zapytanie"}
         </Button>
       </form>
     </Form>
   );
 }
 
-export { MembershipForm };
+export { MembershipForm, type MembershipFormValues };
