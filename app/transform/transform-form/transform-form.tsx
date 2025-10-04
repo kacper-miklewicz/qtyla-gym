@@ -62,7 +62,7 @@ function TransformForm() {
     mode: "onTouched",
   });
 
-  const { triggerSendEmail, isSending } = useSendEmail();
+  const { triggerSendEmail, isSending } = useSendEmail(form.reset);
 
   function onSubmit(values: TransformFormValues) {
     triggerSendEmail("Transform", values);

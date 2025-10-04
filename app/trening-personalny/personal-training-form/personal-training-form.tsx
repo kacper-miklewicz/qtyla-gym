@@ -69,7 +69,7 @@ function PersonalTrainingForm() {
     mode: "onTouched",
   });
 
-  const { triggerSendEmail, isSending } = useSendEmail();
+  const { triggerSendEmail, isSending } = useSendEmail(form.reset);
 
   function onSubmit(values: PersonalTrainingFormValues) {
     triggerSendEmail("Trening Personalny", values);

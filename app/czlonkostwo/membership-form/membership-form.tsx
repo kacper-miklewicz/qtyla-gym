@@ -67,7 +67,7 @@ function MembershipForm() {
     mode: "onTouched",
   });
 
-  const { triggerSendEmail, isSending } = useSendEmail();
+  const { triggerSendEmail, isSending } = useSendEmail(form.reset);
 
   function onSubmit(values: MembershipFormValues) {
     triggerSendEmail("Członkostwo", values);

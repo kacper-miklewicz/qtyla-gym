@@ -8,7 +8,7 @@ import {
   type EmailTemplateParams,
 } from "@/lib/email";
 
-function useSendEmail() {
+function useSendEmail(resetForm: () => void) {
   const [isSending, setIsSending] = useState(false);
 
   async function triggerSendEmail(
@@ -22,6 +22,7 @@ function useSendEmail() {
       toast.success(
         "Pomyślnie wysłano wiadomość! Skontaktujemy się z Tobą wkrótce.",
       );
+      resetForm();
     } catch (error) {
       console.error("Error sending email:", error);
       toast.error(
