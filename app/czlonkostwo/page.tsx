@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import React from "react";
 
 import { MEMBERSHIP_TILES_LIST, FAQ_ITEMS } from "./constants";
@@ -6,6 +7,12 @@ import { FullWidthSection } from "@/components/custom/full-width-section";
 import { TilesCarousel } from "@/components/custom/tiles-carousel";
 import { FAQ } from "@/components/custom/faq";
 import { MembershipForm } from "./membership-form";
+
+export const metadata: Metadata = {
+  title: "Członkostwo",
+  description:
+    "Dołącz do ekskluzywnej społeczności QTYLA Training Club i ciesz się dostępem do najlepszej przestrzeni treningowej w Kwidzynie.",
+};
 
 const MembershipPage = () => {
   return (

@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import React from "react";
 
 import { TRANSFORM_FAQ_ITEMS, TRANSFORM_TILES_LIST } from "./constants";
@@ -7,6 +9,12 @@ import { TilesCarousel } from "@/components/custom/tiles-carousel";
 import { FAQ } from "@/components/custom/faq";
 import { SignUpButton } from "../components/sign-up-button";
 import { TransformForm } from "./transform-form";
+
+export const metadata: Metadata = {
+  title: "Transform",
+  description:
+    "Przekształć swoje ciało w 12 tygodni z naszym programem Transform. Profesjonalny coaching, indywidualnie dopasowany trening i pełne wsparcie zespołu QTYLA Training Club Kwidzyn.",
+};
 
 const TransformPage = () => {
   return (

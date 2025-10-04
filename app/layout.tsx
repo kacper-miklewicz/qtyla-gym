@@ -33,8 +33,28 @@ const epundaSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "QTYLA Training Club",
-  description: "Klub fitness w Kwidzynie",
+  title: {
+    default: "QTYLA Training Club - Klub treningowy premium w Kwidzynie",
+    template: "%s | QTYLA Training Club",
+  },
+  description:
+    "Ekskluzywny klub treningowy w Kwidzynie. Trening personalny, odnowa biologiczna, zdrowy styl życia z QTYLA Training Club.",
+  openGraph: {
+    title: "QTYLA Training Club Kwidzyn",
+    description:
+      "Klub treningowy premium w sercu Kwidzyna. Odkryj ekskluzywny klub treningowy QTYLA Training Club.",
+    url: "https://qtyla.pl",
+    siteName: "QTYLA Training Club",
+    locale: "pl_PL",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://qtyla.pl",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

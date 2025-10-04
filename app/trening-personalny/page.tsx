@@ -12,6 +12,12 @@ import { SignUpButton } from "../components/sign-up-button";
 import { PersonalTrainingTable } from "./personal-training-table";
 import { PersonalTrainingForm } from "./personal-training-form";
 
+export const metadata = {
+  title: "Trening personalny",
+  description:
+    "Rozpocznij swoją przygodę z treningiem personalnym w QTYLA Training Club. Skorzystaj z indywidualnie dopasowanych planów treningowych i wsparcia naszych ekspertów, aby osiągnąć swoje cele fitness.",
+};
+
 const PersonalTrainingPage = () => {
   return (
     <main className="bg-deep-black pt-10 pb-10 pl-6 text-white md:pt-24">

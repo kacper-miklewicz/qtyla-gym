@@ -1,6 +1,14 @@
+import { Metadata } from "next";
+
 import { POLICY_RULES } from "./constants";
 
 import { NumberedRuleList } from "@/components/custom/numbered-rule-list";
+
+export const metadata: Metadata = {
+  title: "Polityka prywatności",
+  description:
+    "Zapoznaj się z naszą polityką prywatności, aby dowiedzieć się, jak chronimy Twoje dane osobowe i zapewniamy bezpieczeństwo informacji w QTYLA Training Club.",
+};
 
 export default function PrivacyPolicyPage() {
   return (

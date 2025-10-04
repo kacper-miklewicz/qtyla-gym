@@ -1,6 +1,13 @@
+import { Metadata } from "next";
+
 import { RULES } from "./constants";
 
 import { NumberedRuleList } from "@/components/custom/numbered-rule-list";
+
+export const metadata: Metadata = {
+  title: "Regulamin",
+  description: "Zapoznaj się z regulaminem QTYLA Training Club.",
+};
 
 export default function RulesPage() {
   return (
