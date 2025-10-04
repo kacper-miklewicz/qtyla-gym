@@ -21,7 +21,7 @@ export const TRANSFORM_TILES_LIST: TileProps[] = [
     backgroundImageUrl: "/transform/physio-care.jpg",
   },
   {
-    title: "Wskazówki żywieniowe",
+    title: "Konsultacja z dietetykiem",
     description:
       "Otrzymasz proste i skuteczne wytyczne, które łatwo wdrożysz w codzienność. Żadnych skomplikowanych diet, tylko praktyczne wskazówki wspierające regenerację, budowanie siły i redukcję tkanki tłuszczowej. Jedzenie zaczyna działać na Twoją korzyść.",
     backgroundImageUrl: "/transform/nutrition-guidelines.jpg",
@@ -31,6 +31,12 @@ export const TRANSFORM_TILES_LIST: TileProps[] = [
     description:
       "Twój cały plan w telefonie - treningi, progres, wskazówki i komunikacja z trenerem. Wszystko uporządkowane, dostępne w każdej chwili i zawsze pod ręką. Dzięki aplikacji wiesz dokładnie, co masz robić, a nic nie umyka.",
     backgroundImageUrl: "/mobile-app.jpg",
+  },
+  {
+    title: "Kontakt z trenerem w sprawach treningowych 24/7",
+    description:
+      "Całodobowe wsparcie trenerskie - kiedy pojawią się pytania, wątpliwości lub potrzebujesz szybkiej konsultacji, jesteśmy dostępni.",
+    backgroundImageUrl: "/transform/contact.jpg",
   },
 ];
 

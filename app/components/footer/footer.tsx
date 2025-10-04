@@ -1,11 +1,14 @@
 import Image from "next/image";
+
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaEnvelope, FaHouse } from "react-icons/fa6";
+import { GoDotFill } from "react-icons/go";
 
 import { QTYLA_EMAIL, QTYLA_PHONE, QTYLA_PHONE_DISPLAY } from "../constants";
 
 import Socials from "@/app/components/navbar/socials";
 import { ContactItem } from "./contact-item";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -82,7 +85,16 @@ export default function Footer() {
           />
         </div>
       </div>
-      <div className="mt-8 text-center text-xs text-white/40">
+      <div className="flex flex-col items-center gap-6 py-8 text-xl text-white md:flex-row md:justify-center md:gap-10 md:py-20">
+        <Link href="/regulamin" className="hover:underline">
+          Regulamin
+        </Link>
+        <GoDotFill className="hidden size-3 md:block" />
+        <Link href="/polityka-prywatnosci" className="hover:underline">
+          Polityka prywatności
+        </Link>
+      </div>
+      <div className="pb-2 text-center text-xs text-white/40">
         &copy; {new Date().getFullYear()} QTYLA Training Club. Wszelkie prawa
         zastrzeżone.
       </div>

@@ -14,7 +14,7 @@ export const MEMBERSHIP_TILES_LIST: TileProps[] = [
     backgroundImageUrl: "/membership/discounts.jpg",
   },
   {
-    title: "Sprzęt i przestrzeń klasy premium",
+    title: "Światowej klasy sprzęt",
     description:
       "Każdy element wyposażenia został starannie dobrany spośród najlepszych marek i rozwiązań. Nie ma tu przypadkowych maszyn ani kompromisów – tylko sprzęt z najwyższej półki, który gwarantuje bezpieczeństwo, efektywność i przyjemność z treningu.",
     backgroundImageUrl: "/membership/premium-equipment.jpg",
