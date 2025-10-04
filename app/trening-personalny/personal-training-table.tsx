@@ -44,7 +44,7 @@ export function PersonalTrainingTable() {
           </TableRow>
           <TableRow>
             <TableCell>Aplikacja treningowa</TableCell>
-            <TableCell>✔</TableCell>
+            <TableCell>-</TableCell>
             <TableCell>✔</TableCell>
             <TableCell>✔</TableCell>
             <TableCell>-</TableCell>
@@ -52,7 +52,7 @@ export function PersonalTrainingTable() {
           <TableRow>
             <TableCell>Konsultacja fizjoterapeuty</TableCell>
             <TableCell>-</TableCell>
-            <TableCell>✔</TableCell>
+            <TableCell>-</TableCell>
             <TableCell>✔</TableCell>
             <TableCell>-</TableCell>
           </TableRow>
