@@ -1,4 +1,42 @@
-import { RULES } from "./constants";
+import { cn } from "@/lib/utils";
+import { RULES, Rule } from "./constants";
+
+function NumberedRuleList({
+  rules,
+  prefix = "",
+  level = 1,
+}: {
+  rules: Rule[];
+  prefix?: string;
+  level?: number;
+}) {
+  return (
+    <ol className={level === 1 ? "ml-4 space-y-6" : "ml-6"}>
+      {rules.map((rule, idx) => {
+        const number = level === 1 ? `${idx + 1}.` : `${prefix}${idx + 1}.`;
+
+        return (
+          <li key={rule.title}>
+            <span
+              className={cn({
+                "text-xl font-semibold": level === 1,
+              })}
+            >
+              {number} {rule.title}
+            </span>
+            {rule.items && rule.items.length > 0 && (
+              <NumberedRuleList
+                rules={rule.items}
+                prefix={number}
+                level={level + 1}
+              />
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
 
 export default function RulesPage() {
   return (
@@ -6,19 +44,9 @@ export default function RulesPage() {
       <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">
         Regulamin klubu
       </h2>
-      <ol className="mx-auto max-w-2xl space-y-0 px-4 text-left text-lg">
-        {RULES.map((rule, idx) => (
-          <li
-            key={idx}
-            className="border-concrete flex items-center gap-4 border-b py-4 last:border-b-0"
-          >
-            <span className="bg-gold-400 text-deep-black ring-gold-800 flex h-10 w-10 flex-shrink-0 items-center justify-center text-xl font-bold shadow-md ring-2">
-              {idx + 1}
-            </span>
-            <span className="pt-1">{rule}</span>
-          </li>
-        ))}
-      </ol>
+      <div className="mx-auto max-w-5xl px-4 text-left text-lg">
+        <NumberedRuleList rules={RULES} />
+      </div>
     </section>
   );
 }
