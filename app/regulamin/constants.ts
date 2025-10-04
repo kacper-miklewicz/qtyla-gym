@@ -1,7 +1,4 @@
-export type Rule = {
-  title: string;
-  items?: Rule[];
-};
+import { Rule } from "@/components/custom/numbered-rule-list";
 
 export const RULES: Rule[] = [
   {
