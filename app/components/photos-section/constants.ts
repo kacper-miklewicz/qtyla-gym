@@ -13,8 +13,4 @@ export const PHOTOS_PATHS = [
   "12.jpeg",
   "13.jpeg",
   "14.jpeg",
-  "15.jpeg",
-  "16.jpeg",
-  "17.jpeg",
-  "18.jpeg",
 ];
