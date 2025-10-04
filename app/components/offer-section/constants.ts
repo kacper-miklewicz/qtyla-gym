@@ -18,7 +18,7 @@ export const OFFER_TILES: Record<string, TileProps> = {
     title: "Trening personalny",
     description:
       "Czas w pełni poświęcony tylko Tobie, w którym trener prowadzi Cię krok po kroku do Twoich celów. To najbardziej indywidualna i skuteczna forma treningu, gwarantująca bezpieczeństwo, pełne zaangażowanie i realne rezultaty.",
-    backgroundImageUrl: "/offer/online-cooperation.jpg",
+    backgroundImageUrl: "/offer/personal-training.jpg",
     buttonText: "Zapisz się",
     isLink: true,
     linkUrl: "/trening-personalny",
@@ -27,7 +27,7 @@ export const OFFER_TILES: Record<string, TileProps> = {
     title: "Zajęcia grupowe",
     description:
       "Trening w małej, kameralnej grupie i energia wspólnego wysiłku. Idealny wybór, jeśli chcesz połączyć atmosferę grupy z indywidualnym wsparciem. Zapisz się na jedne z naszych zajęć i sprawdź, jak działa synergia wspólnego treningu.",
-    backgroundImageUrl: "/offer/transform.jpg",
+    backgroundImageUrl: "/offer/group-training.jpg",
     buttonText: "Zapisz się",
     isLink: true,
     linkUrl: "https://app.fitssey.com/qtylaclub",
@@ -37,7 +37,7 @@ export const OFFER_TILES: Record<string, TileProps> = {
     title: "Transform",
     description:
       "Transform to flagowy, limitowany program QTYLA - 12 tygodni pełnego zaangażowania, które zmieniają sylwetkę, zdrowie i podejście do treningu. Indywidualnie dopasowane plany, analiza postępów, wskazówki żywieniowe, kontrola fizjoterapeuty i stałe wsparcie trenera. To nie tylko program - to inwestycja w trwałą zmianę, którą zobaczysz i poczujesz.",
-    backgroundImageUrl: "/offer/personal-training.jpg",
+    backgroundImageUrl: "/offer/transform.jpg",
     buttonText: "Zapisz się",
     isLink: true,
     linkUrl: "/transform",
@@ -45,7 +45,7 @@ export const OFFER_TILES: Record<string, TileProps> = {
   onlineCooperation: {
     title: "Współpraca online",
     description: `Nie możesz trenować w QTYLA? Nic strasznego. Otrzymaj spersonalizowany plan, wskazówki i wsparcie trenera online - niezależnie od tego, gdzie jesteś. Napisz na ${QTYLA_EMAIL} lub zadzwoń.`,
-    backgroundImageUrl: "/offer/semipersonal-training.jpg",
+    backgroundImageUrl: "/mobile-app.jpg",
     buttonText: "Skontaktuj się",
     onButtonClick: () => scrollSectionIntoView("footer"),
   },

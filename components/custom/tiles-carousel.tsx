@@ -27,7 +27,7 @@ function TilesCarousel({ tilesList, itemClassName }: TilesCarouselProps) {
             <CarouselItem
               key={index}
               className={cn(
-                "md:basis basis-[90%] last:mr-6 sm:basis-[45%] lg:basis-[30%] xl:basis-[22.5%] 2xl:basis-[22.5%]",
+                "basis-[90%] last:mr-6 sm:basis-[45%] lg:basis-[30%] xl:basis-[22.5%]",
                 itemClassName,
               )}
             >

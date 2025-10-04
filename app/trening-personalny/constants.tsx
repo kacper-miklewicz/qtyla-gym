@@ -8,11 +8,11 @@ export const PERSONAL_TRAINING_TILES_LIST: TileProps[] = [
   },
   {
     title: "Dedykowana aplikacja śledząca progres",
-    backgroundImageUrl: "/personal-training/dedicated-app.jpg",
+    backgroundImageUrl: "/mobile-app.jpg",
   },
   {
     title: "Trening w wyjątkowej atmosferze bez tłoku i anonimowości",
-    backgroundImageUrl: "/personal-training/training-atmosphere.jpg",
+    backgroundImageUrl: "/personal-training/training-atmosphere.jpeg",
   },
   {
     title:

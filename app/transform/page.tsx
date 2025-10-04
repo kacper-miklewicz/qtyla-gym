@@ -26,10 +26,7 @@ const TransformPage = () => {
         </p>
         <SignUpButton />
       </div>
-      <TilesCarousel
-        tilesList={TRANSFORM_TILES_LIST}
-        itemClassName="xl:basis-[25%] 2xl:basis-[25%] xl:-6"
-      />
+      <TilesCarousel tilesList={TRANSFORM_TILES_LIST} />
       <FullWidthSection title="FAQ">
         <FAQ items={TRANSFORM_FAQ_ITEMS} />
       </FullWidthSection>

@@ -30,7 +30,7 @@ export const TRANSFORM_TILES_LIST: TileProps[] = [
     title: "Dedykowana aplikacja z planem treningowym",
     description:
       "Twój cały plan w telefonie - treningi, progres, wskazówki i komunikacja z trenerem. Wszystko uporządkowane, dostępne w każdej chwili i zawsze pod ręką. Dzięki aplikacji wiesz dokładnie, co masz robić, a nic nie umyka.",
-    backgroundImageUrl: "/transform/progress-tracking-app.jpg",
+    backgroundImageUrl: "/mobile-app.jpg",
   },
 ];
 

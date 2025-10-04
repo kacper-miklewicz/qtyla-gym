@@ -20,10 +20,12 @@ const PersonalTrainingPage = () => {
         <h2 className="section-title mb-4 ml-0 pr-6">Trening personalny</h2>
         <SignUpButton />
       </div>
-      <TilesCarousel
-        tilesList={PERSONAL_TRAINING_TILES_LIST}
-        itemClassName="xl:basis-[25%] 2xl:basis-[25%] xl:-6"
-      />
+      <div className="xl:pr-6">
+        <TilesCarousel
+          tilesList={PERSONAL_TRAINING_TILES_LIST}
+          itemClassName="xl:basis-[25%] 2xl:basis-[25%]"
+        />
+      </div>
       <FullWidthSection title="Cennik" className="md:block lg:flex">
         <PersonalTrainingTable />
       </FullWidthSection>

@@ -6,14 +6,14 @@ export default function VisionSection() {
     >
       <div className="max-w-3xl">
         <p className="section-content">
-          W codziennym biegu i chaosie Twój trening może być chwilą spokoju i
-          przestrzeni tylko dla Ciebie.
+          Nasz klub powstał po to, żeby promować zdrowe podejście do życia i
+          dbanie o siebie, nie tylko poprzez ruch, ale przez budowanie zdrowych
+          nawyków.
         </p>
         <p className="section-content">
-          QTYLA Training Club to miejsce, w którym jakość, komfort i atmosfera
-          społeczności tworzą doświadczenie wykraczające poza zwykłą aktywność
-          fizyczną Naszą filozofią jest świadome podejście do ruchu i życia -
-          wspieramy Cię, abyś krok po kroku osiągał swoją najlepszą wersję.
+          To wszystko zawarte w kameralnej atmosferze, bez tłoku i chaosu,
+          Poparte limitowaną liczbą miejsc dla jak największego komfortu i
+          jakości.
         </p>
       </div>
     </section>
