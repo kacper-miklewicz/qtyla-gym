@@ -12,7 +12,7 @@ export const ABOUT_ITEMS = [
   {
     title: "sprzęt najwyższej jakości",
     description:
-      "Nowoczesny, profesjonalnie dobrany i światowej renomy sprzęt, który wspiera Twój rozwój na każdym etapie ",
+      "Nowoczesny, profesjonalnie dobrany i światowej renomy sprzęt, który wspiera Twój rozwój na każdym etapie.",
     Icon: LiaDumbbellSolid,
   },
   {
