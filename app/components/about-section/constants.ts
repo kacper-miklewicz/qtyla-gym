@@ -6,7 +6,7 @@ import { RiMentalHealthFill, RiVipDiamondFill } from "react-icons/ri";
 export const ABOUT_ITEMS = [
   {
     title: "kameralna, klimatyczna przestrzeń",
-    description: "Trenujesz w wyjątkowej atmosferze, bez tłoku i anonimowości.",
+    description: "Trenujesz w wyjątkowej atmosferze, bez tłoku i presji.",
     Icon: FaHouseChimney,
   },
   {

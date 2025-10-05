@@ -11,7 +11,7 @@ export const PERSONAL_TRAINING_TILES_LIST: TileProps[] = [
     backgroundImageUrl: "/mobile-app.jpg",
   },
   {
-    title: "Trening w wyjątkowej atmosferze bez tłoku i anonimowości",
+    title: "Trening w wyjątkowej atmosferze bez tłoku i presji",
     backgroundImageUrl: "/personal-training/training-atmosphere.jpeg",
   },
   {
