@@ -22,7 +22,7 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6 bg-black/70 px-6">
         <h1 className="font-serif text-4xl font-bold uppercase md:text-6xl">
-          Coś więcej niż&nbsp;trening
+          więcej niż&nbsp;trening
         </h1>
       </div>
       <Button

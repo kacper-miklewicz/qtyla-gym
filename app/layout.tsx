@@ -34,15 +34,15 @@ const epundaSans = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "QTYLA Training Club - Klub treningowy premium w Kwidzynie",
+    default: "QTYLA Training Club - Klub treningowy w Kwidzynie",
     template: "%s | QTYLA Training Club",
   },
   description:
-    "Ekskluzywny klub treningowy w Kwidzynie. Trening personalny, odnowa biologiczna, zdrowy styl życia z QTYLA Training Club.",
+    "Klub treningowy w Kwidzynie. Trening personalny, odnowa biologiczna, zdrowy styl życia z QTYLA Training Club.",
   openGraph: {
     title: "QTYLA Training Club Kwidzyn",
     description:
-      "Klub treningowy premium w sercu Kwidzyna. Odkryj ekskluzywny klub treningowy QTYLA Training Club.",
+      "Klub treningowy w sercu Kwidzyna. Odkryj klub treningowy QTYLA Training Club.",
     url: "https://qtyla.pl",
     siteName: "QTYLA Training Club",
     locale: "pl_PL",
