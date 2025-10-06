@@ -60,14 +60,14 @@ export default function Footer() {
               <p className="mb-1 xl:text-xl">
                 <span className="font-semibold whitespace-nowrap">
                   Poniedziałek - sobota:
-                </span>{" "}
-                8:00 - 22:00
+                </span>
+                &nbsp; 8:00 - 22:00
               </p>
               <p className="xl:text-xl">
                 <span className="font-semibold whitespace-nowrap">
                   Niedziela:
-                </span>{" "}
-                9:00 - 15:00
+                </span>
+                &nbsp; nieczynne
               </p>
             </div>
             <div className="mt-6 flex justify-center lg:mt-0 lg:ml-8">
