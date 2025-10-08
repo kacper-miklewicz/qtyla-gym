@@ -1,5 +1,3 @@
-import { isExternal } from "util/types";
-
 const MENU_ITEMS = [
   { label: "o klubie", sectionId: "about" },
   { label: "treningi", sectionId: "offer" },

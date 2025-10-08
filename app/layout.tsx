@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s | QTYLA Training Club",
   },
   description:
-    "Klub treningowy w Kwidzynie. Trening personalny, odnowa biologiczna, zdrowy styl życia z QTYLA Training Club.",
+    "Klub treningowy w Kwidzynie. Trening personalny i zdrowy styl życia z QTYLA Training Club.",
   openGraph: {
     title: "QTYLA Training Club Kwidzyn",
     description:
