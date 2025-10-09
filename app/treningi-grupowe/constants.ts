@@ -101,7 +101,7 @@ export const GROUP_TRAINING_FAQ_ITEMS: FAQItem[] = [
   {
     question: "Ile osób jest w grupie i ile trwa trening?",
     answer:
-      "Grupy liczą od 4 do 10 osób, a czas trwania zajęć wynosi od 45 do 75 minut (w zależności od formy i intensywności danego treningu).",
+      "Grupy liczą od 4 do 8 osób, a czas trwania zajęć wynosi od 45 do 75 minut (w zależności od formy i intensywności danego treningu).",
   },
   {
     question: "Co muszę zabrać ze sobą?",
