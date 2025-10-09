@@ -40,10 +40,7 @@ const GroupTrainingPage = () => {
         </Button>
       </div>
       <div className="xl:pr-6">
-        <TilesCarousel
-          tilesList={GROUP_TRAINING_TILES_LIST}
-          itemClassName="xl:basis-[25%] 2xl:basis-[25%]"
-        />
+        <TilesCarousel tilesList={GROUP_TRAINING_TILES_LIST} />
       </div>
       <FullWidthSection title="FAQ">
         <FAQ items={GROUP_TRAINING_FAQ_ITEMS} />
