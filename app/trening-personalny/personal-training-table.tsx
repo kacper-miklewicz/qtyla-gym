@@ -1,3 +1,5 @@
+import { PERSONAL_TRAINING_OPTIONS } from "./constants";
+
 import {
   Table,
   TableBody,
@@ -14,54 +16,85 @@ export function PersonalTrainingTable() {
         <TableHeader>
           <TableRow>
             <TableHead></TableHead>
-            <TableHead>Start</TableHead>
-            <TableHead>Strong</TableHead>
-            <TableHead>Limitless</TableHead>
-            <TableHead>Konsultacja</TableHead>
+            {PERSONAL_TRAINING_OPTIONS.map((option) => (
+              <TableHead key={option.label}>{option.label}</TableHead>
+            ))}
           </TableRow>
         </TableHeader>
         <TableBody>
           <TableRow>
             <TableCell>Liczba treningów</TableCell>
-            <TableCell>8</TableCell>
-            <TableCell>12</TableCell>
-            <TableCell>16</TableCell>
-            <TableCell>-</TableCell>
+            {PERSONAL_TRAINING_OPTIONS.map(({ trainingCount }) => (
+              <TableCell key={trainingCount}>{trainingCount ?? "-"}</TableCell>
+            ))}
           </TableRow>
           <TableRow>
             <TableCell>Z kartą klubową</TableCell>
-            <TableCell>140 PLN / sesja</TableCell>
-            <TableCell>130 PLN / sesja</TableCell>
-            <TableCell>125 PLN / sesja</TableCell>
-            <TableCell>150 PLN / sesja</TableCell>
+            {PERSONAL_TRAINING_OPTIONS.map(
+              ({ withClubCardPrice, trainingCount }) => (
+                <TableCell key={withClubCardPrice}>
+                  <p className="mb-1">
+                    {withClubCardPrice
+                      ? `${withClubCardPrice} PLN / sesja`
+                      : "-"}
+                  </p>
+                  {trainingCount && (
+                    <p className="text-sm text-white/50">
+                      Koszt całkowity:&nbsp;
+                      {withClubCardPrice
+                        ? `${withClubCardPrice * trainingCount} PLN`
+                        : "-"}
+                    </p>
+                  )}
+                </TableCell>
+              ),
+            )}
           </TableRow>
           <TableRow>
             <TableCell>Bez karty klubowej</TableCell>
-            <TableCell>190 PLN / sesja</TableCell>
-            <TableCell>180 PLN / sesja</TableCell>
-            <TableCell>175 PLN / sesja</TableCell>
-            <TableCell>200 PLN / sesja</TableCell>
+            {PERSONAL_TRAINING_OPTIONS.map(
+              ({ withoutClubCardPrice, trainingCount }) => (
+                <TableCell key={withoutClubCardPrice}>
+                  <p className="mb-1">
+                    {withoutClubCardPrice
+                      ? `${withoutClubCardPrice} PLN / sesja`
+                      : "-"}
+                  </p>
+                  {trainingCount && (
+                    <p className="text-sm text-white/50">
+                      Koszt całkowity:&nbsp;
+                      {withoutClubCardPrice
+                        ? `${withoutClubCardPrice * trainingCount} PLN`
+                        : "-"}
+                    </p>
+                  )}
+                </TableCell>
+              ),
+            )}
           </TableRow>
           <TableRow>
             <TableCell>Aplikacja treningowa</TableCell>
-            <TableCell>-</TableCell>
-            <TableCell>✔</TableCell>
-            <TableCell>✔</TableCell>
-            <TableCell>-</TableCell>
+            {PERSONAL_TRAINING_OPTIONS.map(({ trainingApp, label }) => (
+              <TableCell key={`${label}-training-app`}>
+                {trainingApp ? "✔" : "-"}
+              </TableCell>
+            ))}
           </TableRow>
           <TableRow>
             <TableCell>Konsultacja fizjoterapeuty</TableCell>
-            <TableCell>-</TableCell>
-            <TableCell>-</TableCell>
-            <TableCell>✔</TableCell>
-            <TableCell>-</TableCell>
+            {PERSONAL_TRAINING_OPTIONS.map(({ physioConsultation, label }) => (
+              <TableCell key={`${label}-physiotherapy-consultation`}>
+                {physioConsultation ? "✔" : "-"}
+              </TableCell>
+            ))}
           </TableRow>
           <TableRow>
             <TableCell>Ważność pakietu</TableCell>
-            <TableCell>2 miesiące</TableCell>
-            <TableCell>2 miesiące</TableCell>
-            <TableCell>3 miesiące</TableCell>
-            <TableCell>-</TableCell>
+            {PERSONAL_TRAINING_OPTIONS.map(({ packageValidity, label }) => (
+              <TableCell key={`${label}-package-validity`}>
+                {packageValidity ?? "-"}
+              </TableCell>
+            ))}
           </TableRow>
         </TableBody>
       </Table>

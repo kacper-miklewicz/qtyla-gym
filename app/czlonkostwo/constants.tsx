@@ -65,8 +65,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Jak długo trwa slot treningowy?",
-    answer:
-      "Slot treningowy trwa 1 godzinę 45 minut. Dodatkowo przewidziany jest 15-minutowy buffer na przebranie się przed i po treningu oraz przygotowanie sali dla kolejnych osób.",
+    answer: "Slot treningowy trwa 1 godzinę 30 minut.",
   },
   {
     question: "Jak wygląda płatność?",

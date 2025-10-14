@@ -88,3 +88,42 @@ export const PERSONAL_TRAINING_FAQ_ITEMS: FAQItem[] = [
     ),
   },
 ];
+
+export const PERSONAL_TRAINING_OPTIONS = [
+  {
+    label: "Start",
+    trainingCount: 8,
+    withClubCardPrice: 140,
+    withoutClubCardPrice: 190,
+    trainingApp: false,
+    physioConsultation: false,
+    packageValidity: "2 miesiące",
+  },
+  {
+    label: "Strong",
+    trainingCount: 12,
+    withClubCardPrice: 130,
+    withoutClubCardPrice: 180,
+    trainingApp: true,
+    physioConsultation: false,
+    packageValidity: "2 miesiące",
+  },
+  {
+    label: "Limitless",
+    trainingCount: 16,
+    withClubCardPrice: 125,
+    withoutClubCardPrice: 170,
+    trainingApp: true,
+    physioConsultation: true,
+    packageValidity: "3 miesiące",
+  },
+  {
+    label: "Konsultacja",
+    trainingCount: null,
+    withClubCardPrice: 150,
+    withoutClubCardPrice: 200,
+    trainingApp: false,
+    physioConsultation: false,
+    packageValidity: null,
+  },
+];

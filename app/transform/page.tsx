@@ -40,7 +40,7 @@ const TransformPage = () => {
       </FullWidthSection>
       <FullWidthSection title="Cena" className="items-center">
         <p className="section-content">
-          Cena pakietu wynosi 6000 zł. W jego zakres wchodzi 36 treningów w
+          Cena pakietu wynosi 8000 zł. W jego zakres wchodzi 36 treningów w
           okresie 12 tygodni.
         </p>
       </FullWidthSection>
