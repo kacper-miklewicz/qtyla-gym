@@ -47,6 +47,9 @@ const formSchema = z.object({
   acceptTerms: z.boolean().refine((val) => val === true, {
     message: "Musisz zaakceptować regulamin",
   }),
+  is18OrOlder: z.boolean().refine((val) => val === true, {
+    message: "Musisz mieć ukończone 18 lat",
+  }),
 });
 
 type MembershipFormValues = z.infer<typeof formSchema>;
@@ -63,6 +66,7 @@ function MembershipForm() {
       preferredCooperationPeriod: undefined,
       customMessage: "",
       acceptTerms: false,
+      is18OrOlder: false,
     },
     mode: "onTouched",
   });
@@ -110,6 +114,28 @@ function MembershipForm() {
                     </Link>
                     .
                   </span>
+                </FormLabel>
+              </div>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="is18OrOlder"
+          render={({ field }) => (
+            <FormItem>
+              <div className="flex flex-row items-center space-y-0 space-x-2">
+                <FormControl>
+                  <Checkbox
+                    className="size-5"
+                    checked={field.value as CheckedState}
+                    onCheckedChange={field.onChange}
+                    required
+                  />
+                </FormControl>
+                <FormLabel className="font-normal">
+                  Oświadczam, że mam ukończone 18 lat.
                 </FormLabel>
               </div>
               <FormMessage />
