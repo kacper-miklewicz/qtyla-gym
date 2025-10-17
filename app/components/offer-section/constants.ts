@@ -11,7 +11,6 @@ export const OFFER_TILES: TileProps[] = [
     buttonText: "Zapisz się",
     isLink: true,
     linkUrl: "/treningi-grupowe",
-    linkTarget: "_blank",
   },
   {
     title: "Trening personalny",
