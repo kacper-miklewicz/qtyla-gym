@@ -1,5 +1,7 @@
-import { TileProps } from "@/components/custom/tile";
+import type { TileProps } from "@/components/custom/tile";
 import type { FAQItem } from "@/components/custom/faq";
+import type { PersonalTrainingTileProps } from "@/components/custom/personal-training-tile";
+import { TileDecoration } from "./tile-decoration";
 
 export const PERSONAL_TRAINING_TILES_LIST: TileProps[] = [
   {
@@ -125,5 +127,83 @@ export const PERSONAL_TRAINING_OPTIONS = [
     trainingApp: false,
     physioConsultation: false,
     packageValidity: null,
+  },
+];
+
+export const PERSONAL_TRAININGS_PACKAGES_TILES_LIST: PersonalTrainingTileProps[] =
+  [
+    {
+      label: "Trening personalny",
+      sessionsPerWeek: 1,
+      totalPrice: 200,
+      trainingApp: false,
+      physioConsultation: false,
+      singleSession: true,
+      customDescription: "Jednorazowa sesja treningowa",
+    },
+    {
+      label: "Start",
+      sessionsPerWeek: 1,
+      totalPrice: 790,
+      trainingApp: false,
+      physioConsultation: false,
+      children: (
+        <TileDecoration
+          text="Pakiet dostępny jednorazowo"
+          className="bg-gold/70"
+        />
+      ),
+    },
+    {
+      label: "Strong",
+      sessionsPerWeek: 2,
+      totalPrice: 1520,
+      trainingApp: true,
+      physioConsultation: false,
+      children: <TileDecoration text="Bestseller" className="bg-red-600" />,
+    },
+    {
+      label: "Limitless",
+      sessionsPerWeek: 3,
+      totalPrice: 2160,
+      trainingApp: true,
+      physioConsultation: true,
+    },
+  ];
+
+export const DUO_TRAININGS_PACKAGES_TILES_LIST: PersonalTrainingTileProps[] = [
+  {
+    label: "Duo",
+    sessionsPerWeek: 1,
+    totalPrice: 300,
+    trainingApp: false,
+    physioConsultation: false,
+    singleSession: true,
+    customDescription: "Jednorazowa sesja treningowa",
+    isDuo: true,
+  },
+  {
+    label: "Duo Start",
+    sessionsPerWeek: 1,
+    totalPrice: 1200,
+    trainingApp: false,
+    physioConsultation: false,
+    isDuo: true,
+  },
+  {
+    label: "Duo Strong",
+    sessionsPerWeek: 2,
+    totalPrice: 2200,
+    trainingApp: true,
+    physioConsultation: false,
+    isDuo: true,
+  },
+  {
+    label: "Duo Limitless",
+    sessionsPerWeek: 3,
+    totalPrice: 3000,
+    trainingApp: true,
+    physioConsultation: true,
+    isDuo: true,
   },
 ];

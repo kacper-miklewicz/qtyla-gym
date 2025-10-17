@@ -9,7 +9,7 @@ import { FullWidthSection } from "@/components/custom/full-width-section";
 import { TilesCarousel } from "@/components/custom/tiles-carousel";
 import { FAQ } from "@/components/custom/faq";
 import { SignUpButton } from "../components/sign-up-button";
-import { PersonalTrainingTable } from "./personal-training-table";
+import { PersonalTrainingPricing } from "./personal-training-pricing";
 import { PersonalTrainingForm } from "./personal-training-form";
 
 export const metadata = {
@@ -32,9 +32,7 @@ const PersonalTrainingPage = () => {
           itemClassName="xl:basis-[25%] 2xl:basis-[25%]"
         />
       </div>
-      <FullWidthSection title="Cennik" className="md:block lg:flex">
-        <PersonalTrainingTable />
-      </FullWidthSection>
+      <PersonalTrainingPricing />
       <FullWidthSection title="FAQ">
         <FAQ items={PERSONAL_TRAINING_FAQ_ITEMS} />
       </FullWidthSection>

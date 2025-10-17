@@ -1,5 +1,10 @@
 import { Tile, type TileProps } from "./tile";
 import {
+  isPersonalTrainingTileProps,
+  PersonalTrainingTile,
+  PersonalTrainingTileProps,
+} from "./personal-training-tile";
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -9,7 +14,7 @@ import {
 import { cn } from "@/lib/utils";
 
 interface TilesCarouselProps {
-  tilesList: TileProps[];
+  tilesList: TileProps[] | PersonalTrainingTileProps[];
   itemClassName?: string;
 }
 
@@ -31,17 +36,32 @@ function TilesCarousel({ tilesList, itemClassName }: TilesCarouselProps) {
                 itemClassName,
               )}
             >
-              <Tile
-                title={tile.title}
-                description={tile.description}
-                backgroundImageUrl={tile.backgroundImageUrl}
-                buttonText={tile.buttonText}
-                onButtonClick={tile.onButtonClick}
-                isLink={tile.isLink}
-                linkUrl={tile.linkUrl}
-                inProgress={tile.inProgress}
-                linkTarget={tile.linkTarget}
-              />
+              {isPersonalTrainingTileProps(tile) ? (
+                <PersonalTrainingTile
+                  label={tile.label}
+                  sessionsPerWeek={tile.sessionsPerWeek}
+                  totalPrice={tile.totalPrice}
+                  trainingApp={tile.trainingApp}
+                  physioConsultation={tile.physioConsultation}
+                  singleSession={tile.singleSession}
+                  customDescription={tile.customDescription}
+                  isDuo={tile.isDuo}
+                >
+                  {tile.children}
+                </PersonalTrainingTile>
+              ) : (
+                <Tile
+                  title={tile.title}
+                  description={tile.description}
+                  backgroundImageUrl={tile.backgroundImageUrl}
+                  buttonText={tile.buttonText}
+                  onButtonClick={tile.onButtonClick}
+                  isLink={tile.isLink}
+                  linkUrl={tile.linkUrl}
+                  inProgress={tile.inProgress}
+                  linkTarget={tile.linkTarget}
+                />
+              )}
             </CarouselItem>
           ))}
         </CarouselContent>
