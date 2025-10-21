@@ -44,6 +44,7 @@ function PersonalTrainingTile({
     : ` - ${sessionsPerMonth}x / miesiąc`;
 
   const pricePerSession = totalPrice / sessionsPerMonth / (isDuo ? 2 : 1);
+  const displayedPricePerSession = Math.round(pricePerSession);
 
   const trainingsVerb = sessionsPerWeek > 1 ? "treningi" : "trening";
 
@@ -63,18 +64,18 @@ function PersonalTrainingTile({
             className={cn("text-lg text-white/70", {
               invisible: singleSession,
             })}
-          >{`${pricePerSession.toFixed(2)} ${pricePerSessionText}`}</p>
+          >{`${displayedPricePerSession} ${pricePerSessionText}`}</p>
         }
       </div>
       <div className="text-center text-2xl">
         {customDescription ?? `${sessionsPerWeek} ${trainingsVerb} tygodniowo`}
       </div>
-      <div className="text-xl">
-        <p className="flex items-center gap-2">
+      <div className="flex flex-col gap-4 text-xl">
+        <p className="flex flex-col items-center gap-2">
           Aplikacja treningowa
           <AppIcon />
         </p>
-        <p className="flex items-center gap-2">
+        <p className="flex flex-col items-center gap-2">
           Konsultacja fizjoterapeuty
           <PhysioIcon />
         </p>

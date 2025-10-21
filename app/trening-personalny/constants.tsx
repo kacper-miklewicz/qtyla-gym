@@ -144,7 +144,7 @@ export const PERSONAL_TRAININGS_PACKAGES_TILES_LIST: PersonalTrainingTileProps[]
     {
       label: "Start",
       sessionsPerWeek: 1,
-      totalPrice: 790,
+      totalPrice: 799,
       trainingApp: false,
       physioConsultation: false,
       children: (
