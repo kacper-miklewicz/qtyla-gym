@@ -8,7 +8,7 @@ export const OFFER_TILES: TileProps[] = [
     description:
       "Trening w małej, kameralnej grupie i energia wspólnego wysiłku. Idealny wybór, jeśli chcesz połączyć atmosferę grupy z indywidualnym wsparciem. Zapisz się na jedne z naszych zajęć i sprawdź, jak działa synergia wspólnego treningu.",
     backgroundImageUrl: "/offer/group-training.jpg",
-    buttonText: "Zapisz się",
+    buttonText: "Sprawdź",
     isLink: true,
     linkUrl: "/treningi-grupowe",
   },
@@ -17,7 +17,7 @@ export const OFFER_TILES: TileProps[] = [
     description:
       "Czas w pełni poświęcony tylko Tobie, w którym trener prowadzi Cię krok po kroku do Twoich celów. To najbardziej indywidualna i skuteczna forma treningu, gwarantująca bezpieczeństwo, pełne zaangażowanie i realne rezultaty.",
     backgroundImageUrl: "/offer/personal-training.jpg",
-    buttonText: "Zapisz się",
+    buttonText: "Sprawdź",
     isLink: true,
     linkUrl: "/trening-personalny",
   },
@@ -26,7 +26,7 @@ export const OFFER_TILES: TileProps[] = [
     description:
       "Dołącz do limitowanej społeczności QTYLA i trenuj w przestrzeni bez tłoku i chaosu. Zarezerwuj swój slot i ciesz się komfortem, jakością i wyjątkową atmosferą.",
     backgroundImageUrl: "/membership/membership-card.jpg",
-    buttonText: "Dołącz",
+    buttonText: "Sprawdź",
     isLink: true,
     linkUrl: "/czlonkostwo",
   },
@@ -35,7 +35,7 @@ export const OFFER_TILES: TileProps[] = [
     description:
       "Transform to flagowy, limitowany program QTYLA - 12 tygodni pełnego zaangażowania, które zmieniają sylwetkę, zdrowie i podejście do treningu. Indywidualnie dopasowane plany, analiza postępów, wskazówki żywieniowe, kontrola fizjoterapeuty i stałe wsparcie trenera. To nie tylko program - to inwestycja w trwałą zmianę, którą zobaczysz i poczujesz.",
     backgroundImageUrl: "/offer/transform.jpg",
-    buttonText: "Zapisz się",
+    buttonText: "Sprawdź",
     isLink: true,
     linkUrl: "/transform",
   },
