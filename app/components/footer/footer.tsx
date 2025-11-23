@@ -54,21 +54,34 @@ export default function Footer() {
           </div>
           <div className="md:flex-start mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 md:justify-between lg:flex-row">
             <div>
-              <h4 className="text-primary-400 mb-2 text-base font-semibold xl:mb-6 xl:text-2xl">
+              <h4 className="text-primary-400 mb-6 text-xl font-semibold xl:mb-6 xl:text-2xl">
                 Godziny otwarcia
               </h4>
-              <p className="mb-1 xl:text-xl">
-                <span className="font-semibold whitespace-nowrap">
-                  Poniedziałek - sobota:
-                </span>
-                &nbsp; 8:00 - 22:00
-              </p>
-              <p className="xl:text-xl">
-                <span className="font-semibold whitespace-nowrap">
-                  Niedziela:
-                </span>
-                &nbsp; nieczynne
-              </p>
+              <div className="flex flex-col gap-8 text-sm leading-relaxed xl:text-xl">
+                <div className="border-primary-400/70 border-l-4 pl-4">
+                  <p className="text-primary-400 text-lg font-thin tracking-[0.2em] text-white/60 uppercase xl:text-xl">
+                    Recepcja
+                  </p>
+                  <div className="mt-1 text-lg md:text-xl">
+                    <div className="mb-2 font-semibold whitespace-nowrap">
+                      Poniedziałek – piątek
+                    </div>{" "}
+                    <div className="whitespace-nowrap">08:00 – 12:00</div>
+                    <div className="whitespace-nowrap">16:00 – 20:00</div>
+                  </div>
+                </div>
+                <div className="border-primary-400/70 border-l-4 pl-4">
+                  <p className="text-primary-400 text-lg font-thin tracking-[0.2em] text-white/60 uppercase xl:text-xl">
+                    Dostęp dla członków
+                  </p>
+                  <div className="mt-1 text-lg md:text-xl">
+                    <div className="mb-2 font-semibold whitespace-nowrap">
+                      Poniedziałek – sobota
+                    </div>{" "}
+                    <div className="whitespace-nowrap">06:00 – 22:30</div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="mt-6 flex justify-center lg:mt-0 lg:ml-8">
               <Socials variant="universal" />

@@ -39,7 +39,7 @@ const MembershipPage = () => {
           &nbsp;350&nbsp;PLN/miesiąc
         </p>
         <p className="section-content text-sm">
-          *obecna cena obowiązuje tylko do końca października
+          *obecna cena obowiązuje tylko do końca grudnia
         </p>
       </FullWidthSection>
       <FullWidthSection title="Dołącz do nas" id="sign-up-form">
