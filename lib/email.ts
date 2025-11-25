@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 
-import { MembershipFormValues } from "@/app/czlonkostwo/membership-form/membership-form";
+import { MembershipFormValues } from "@/app/gym-pass/membership-form/membership-form";
 import { TransformFormValues } from "@/app/transform/transform-form/transform-form";
 import { PersonalTrainingFormValues } from "@/app/trening-personalny/personal-training-form/personal-training-form";
 

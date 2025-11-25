@@ -1,7 +1,7 @@
 const MENU_ITEMS = [
   { label: "o klubie", sectionId: "about" },
   { label: "treningi", sectionId: "offer" },
-  { label: "członkostwo", sectionId: "czlonkostwo", isLink: true },
+  { label: "gym pass", sectionId: "gym-pass", isLink: true },
   {
     label: "grafik",
     isLink: true,

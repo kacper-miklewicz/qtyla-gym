@@ -22,13 +22,13 @@ export const OFFER_TILES: TileProps[] = [
     linkUrl: "/trening-personalny",
   },
   {
-    title: "Członkostwo",
+    title: "Gym Pass",
     description:
       "Dołącz do limitowanej społeczności QTYLA i trenuj w przestrzeni bez tłoku i chaosu. Zarezerwuj swój slot i ciesz się komfortem, jakością i wyjątkową atmosferą.",
     backgroundImageUrl: "/membership/membership-card.jpg",
     buttonText: "Sprawdź",
     isLink: true,
-    linkUrl: "/czlonkostwo",
+    linkUrl: "/gym-pass",
   },
   {
     title: "Transform",

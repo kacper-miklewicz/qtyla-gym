@@ -9,7 +9,7 @@ import { FAQ } from "@/components/custom/faq";
 import { MembershipForm } from "./membership-form";
 
 export const metadata: Metadata = {
-  title: "Członkostwo",
+  title: "Gym Pass",
   description:
     "Dołącz do ekskluzywnej społeczności QTYLA Training Club i ciesz się dostępem do najlepszej przestrzeni treningowej w Kwidzynie.",
 };
@@ -20,13 +20,13 @@ const MembershipPage = () => {
       <div className="w-full text-left">
         <h3 className="section-subtitle pr-6">dołącz do qtyla training club</h3>
         <h2 className="section-title mb-10 ml-0 pr-6">
-          Bądź częścią czegoś większego
+          trenuj w komforcie, bez tłoku
         </h2>
         <p className="section-content mb-10 max-w-7xl pr-6 text-left">
-          Członkostwo w QTYLA to dostęp do limitowanej społeczności, w której
-          trenujesz w spokoju, bez tłoku i chaosu. To miejsce stworzone dla
-          ludzi, którzy chcą rozwijać się świadomie i otaczać się tymi, którzy
-          myślą podobnie.
+          GYM PASS to prosty i wygodny dostęp do naszej siłowni. Trenujesz
+          samodzielnie w komfortowej przestrzeni, bez tłoku i chaosu. To idealna
+          opcja dla osób, które chcą skupić się na własnym treningu –
+          efektywnie, spokojnie i z dostępem do najwyższej jakości sprzętu.
         </p>
       </div>
       <TilesCarousel tilesList={MEMBERSHIP_TILES_LIST} />
