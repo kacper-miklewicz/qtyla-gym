@@ -35,11 +35,7 @@ const MembershipPage = () => {
       </FullWidthSection>
       <FullWidthSection title="Cena" className="items-center">
         <p className="section-content mb-1">
-          Subskrypcja klubowa wynosi <span className="line-through">450</span>
-          &nbsp;350&nbsp;PLN/miesiąc
-        </p>
-        <p className="section-content text-sm">
-          *obecna cena obowiązuje tylko do końca grudnia
+          Subskrypcja klubowa wynosi&nbsp;350&nbsp;PLN/miesiąc
         </p>
       </FullWidthSection>
       <FullWidthSection title="Dołącz do nas" id="sign-up-form">

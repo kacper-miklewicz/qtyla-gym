@@ -45,9 +45,12 @@ export const GROUP_TRAINING_TILES_LIST: TileProps[] = [
   {
     title: "Mobility",
     description:
-      "Trening mobilności skoncentrowany na poprawie zakresu ruchu, elastyczności i regeneracji. Wykorzystuje różnorodne techniki, takie jak stretching, rolowanie i ćwiczenia oddechowe. Grupy: 6-8 osób.",
+      "Trening ukierunkowany na poprawę zakresu ruchu, elastyczności i kontroli nad ciałem. Łączy elementy stretchingu, aktywnej mobilizacji, stabilizacji i pracy oddechowej. Pomaga zmniejszać napięcia, poprawiać postawę i przygotowywać ciało do innych form treningu. Sprawdza się u osób trenujących siłowo, aktywnych sportowo i tych, którzy chcą lepiej się ruszać i zapobiegać kontuzjom. Grupy: 6-8 osób.",
     backgroundImageUrl: "/group-training/mobility.jpg",
-    inProgress: true,
+    buttonText: "Zapisz się",
+    linkUrl: "https://app.fitssey.com/qtylaclub",
+    linkTarget: "_blank",
+    isLink: true,
   },
 ];
 
