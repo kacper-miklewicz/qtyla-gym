@@ -31,15 +31,6 @@ export const OFFER_TILES: TileProps[] = [
     linkUrl: "/gym-pass",
   },
   {
-    title: "Transform",
-    description:
-      "Transform to flagowy, limitowany program QTYLA - 12 tygodni pełnego zaangażowania, które zmieniają sylwetkę, zdrowie i podejście do treningu. Indywidualnie dopasowane plany, analiza postępów, wskazówki żywieniowe, kontrola fizjoterapeuty i stałe wsparcie trenera. To nie tylko program - to inwestycja w trwałą zmianę, którą zobaczysz i poczujesz.",
-    backgroundImageUrl: "/offer/transform.jpg",
-    buttonText: "Sprawdź",
-    isLink: true,
-    linkUrl: "/transform",
-  },
-  {
     title: "Współpraca online",
     description: `Nie możesz trenować w QTYLA? Nic strasznego. Otrzymaj spersonalizowany plan, wskazówki i wsparcie trenera online - niezależnie od tego, gdzie jesteś. Napisz na ${QTYLA_EMAIL} lub zadzwoń.`,
     backgroundImageUrl: "/mobile-app.jpg",

@@ -15,12 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: "https://qtyla.pl/transform",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: "https://qtyla.pl/trening-personalny",
       lastModified: new Date(),
       changeFrequency: "monthly",

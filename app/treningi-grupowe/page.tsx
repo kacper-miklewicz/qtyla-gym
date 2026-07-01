@@ -26,12 +26,11 @@ const GroupTrainingPage = () => {
         <p className="section-content mb-10 max-w-7xl pr-6 text-left">
           Zajęcia grupowe w QTYLA to świadomy trening w małych zespołach (4-8
           osób), bez chaosu i przypadkowości. Każdy format ma swój cel — od
-          spalania i wydolności (HYROX, Burning), przez ogólną sprawność
-          (Functional), siłę (Strength), aż po mobilność i regenerację
-          (Mobility). Małe grupy pozwalają zachować technikę, tempo i
-          indywidualne podejście, a każdy trening można dopasować do poziomu
-          uczestnika. To forma, która daje atmosferę, motywację i realne efekty
-          — bez tłoku.
+          spalania i wydolności (HYROX), przez ogólną sprawność (Functional),
+          siłę (Strength), aż po mobilność i regenerację (Mobility). Małe grupy
+          pozwalają zachować technikę, tempo i indywidualne podejście, a każdy
+          trening można dopasować do poziomu uczestnika. To forma, która daje
+          atmosferę, motywację i realne efekty — bez tłoku.
         </p>
         <Button asChild variant="outline" size="lg">
           <Link target="_blank" href="https://app.fitssey.com/qtylaclub">

@@ -3,40 +3,10 @@ import { TileProps } from "@/components/custom/tile";
 
 export const GROUP_TRAINING_TILES_LIST: TileProps[] = [
   {
-    title: "Functional",
+    title: "Intro",
     description:
-      "Trening ogólnorozwojowy oparty na naturalnych wzorcach ruchowych i pracy całego ciała. Łączy mobilność, stabilizację, siłę i dynamikę. Wykorzystuje m.in. TRX, hantle, ergometry, stepy i masę własnego ciała. Jest dobry dla każdego poziomu - od początkujących po aktywnych sportowo. Grupy: 6-8 osób.",
-    backgroundImageUrl: "/group-training/functional.jpg",
-    buttonText: "Zapisz się",
-    linkUrl: "https://app.fitssey.com/qtylaclub",
-    linkTarget: "_blank",
-    isLink: true,
-  },
-  {
-    title: "Burning",
-    description:
-      "Intensywny trening interwałowy, który łączy elementy cardio i siły. Skupia się na spalaniu tkanki tłuszczowej i poprawie wydolności. Grupy: 6-8 osób.",
-    backgroundImageUrl: "/group-training/burning.jpg",
-    buttonText: "Zapisz się",
-    linkUrl: "https://app.fitssey.com/qtylaclub",
-    linkTarget: "_blank",
-    isLink: true,
-  },
-  {
-    title: "Hyrox",
-    description:
-      "Hyrox to unikalny format zawodów, który łączy bieganie z różnorodnymi ćwiczeniami siłowymi i wytrzymałościowymi. Idealny dla osób, które chcą sprawdzić swoją kondycję w wymagającym teście. Grupy: 6-8 osób.",
-    backgroundImageUrl: "/group-training/hyrox.jpg",
-    buttonText: "Zapisz się",
-    linkUrl: "https://app.fitssey.com/qtylaclub",
-    linkTarget: "_blank",
-    isLink: true,
-  },
-  {
-    title: "Strong",
-    description:
-      "Trening siłowy skoncentrowany na budowaniu masy mięśniowej i zwiększaniu siły. Wykorzystuje wolne ciężary, maszyny oraz ćwiczenia z masą własnego ciała. Grupy: 4-6 osób.",
-    backgroundImageUrl: "/group-training/strong.jpg",
+      "Dopiero zaczynasz? Wracasz po dłuższej przerwie? A może siłownia zawsze wydawała Ci się skomplikowana? Na zajęciach INTRO nauczysz się poprawnej techniki, zbudujesz pewność siebie i poznasz podstawy treningu w spokojnej, wspierającej atmosferze. Dzięki temu unikniesz błędów, zmniejszysz ryzyko kontuzji i przygotujesz swoje ciało do kolejnych etapów rozwoju. To najlepszy pierwszy krok do zdrowia, sprawności i regularnych treningów.",
+    backgroundImageUrl: "/group-training/intro.jpg",
     buttonText: "Zapisz się",
     linkUrl: "https://app.fitssey.com/qtylaclub",
     linkTarget: "_blank",
@@ -45,8 +15,38 @@ export const GROUP_TRAINING_TILES_LIST: TileProps[] = [
   {
     title: "Mobility",
     description:
-      "Trening ukierunkowany na poprawę zakresu ruchu, elastyczności i kontroli nad ciałem. Łączy elementy stretchingu, aktywnej mobilizacji, stabilizacji i pracy oddechowej. Pomaga zmniejszać napięcia, poprawiać postawę i przygotowywać ciało do innych form treningu. Sprawdza się u osób trenujących siłowo, aktywnych sportowo i tych, którzy chcą lepiej się ruszać i zapobiegać kontuzjom. Grupy: 6-8 osób.",
+      "Bolą Cię plecy? Czujesz sztywność w biodrach, barkach albo karku? A może chcesz trenować bez bólu i ograniczeń? Na zajęciach MOBILITY poprawisz zakres ruchu, zmniejszysz napięcia mięśniowe i zadbasz o zdrowe stawy. To idealny sposób na regenerację, profilaktykę kontuzji i lepsze samopoczucie każdego dnia. Poruszaj się swobodniej i poczuj różnicę już po kilku treningach.",
     backgroundImageUrl: "/group-training/mobility.jpg",
+    buttonText: "Zapisz się",
+    linkUrl: "https://app.fitssey.com/qtylaclub",
+    linkTarget: "_blank",
+    isLink: true,
+  },
+  {
+    title: "Hyrox",
+    description:
+      "Lubisz mocne treningi i wyzwania? Chcesz poprawić kondycję, wytrzymałość i sprawdzić swoje możliwości? HYROX łączy bieganie z ćwiczeniami siłowymi i funkcjonalnymi, tworząc jeden z najbardziej wszechstronnych treningów na świecie. To świetny wybór zarówno dla osób przygotowujących się do zawodów, jak i tych, które po prostu chcą wejść na wyższy poziom. Jeśli lubisz dawać z siebie 100% – te zajęcia są dla Ciebie.",
+    backgroundImageUrl: "/group-training/hyrox.jpg",
+    buttonText: "Zapisz się",
+    linkUrl: "https://app.fitssey.com/qtylaclub",
+    linkTarget: "_blank",
+    isLink: true,
+  },
+  {
+    title: "Functional",
+    description:
+      "Chcesz poprawić formę, sylwetkę i sprawność jednocześnie? FUNCTIONAL rozwija siłę, kondycję, mobilność i koordynację podczas dynamicznych treningów całego ciała. To nasze najbardziej uniwersalne zajęcia, które przygotują Cię zarówno do codziennego życia, jak i sportowych wyzwań. Najlepszy wybór, jeśli nie wiesz, od czego zacząć.",
+    backgroundImageUrl: "/group-training/functional.jpg",
+    buttonText: "Zapisz się",
+    linkUrl: "https://app.fitssey.com/qtylaclub",
+    linkTarget: "_blank",
+    isLink: true,
+  },
+  {
+    title: "Strong",
+    description:
+      "Chcesz zbudować siłę, wyrzeźbić atletyczną sylwetkę i czuć się pewniej każdego dnia? STRONG to trening oparty na wolnych ciężarach i sprawdzonych metodach treningu siłowego. Nauczysz się prawidłowej techniki, zbudujesz mocne fundamenty, rozwiniesz siłę oraz mięśnie, dzięki czemu Twoje ciało będzie nie tylko silniejsze, ale również bardziej proporcjonalne i estetyczne. To idealny wybór dla osób, które chcą wyglądać lepiej, być silniejsze i trenować z konkretnym celem.",
+    backgroundImageUrl: "/group-training/strong.jpg",
     buttonText: "Zapisz się",
     linkUrl: "https://app.fitssey.com/qtylaclub",
     linkTarget: "_blank",
